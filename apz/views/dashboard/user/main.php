@@ -14,6 +14,8 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/main_styles.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/custom.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/single_styles.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/single_responsive.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/categories_styles.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/categories_responsive.css">
@@ -61,8 +63,15 @@
                       <li><a href="<?= site_url('login'); ?>"><i class="fa fa-user-circle"></i>Masuk</a></li>
                       <li><a href="<?= site_url('register'); ?>"><i class="fa fa-sign-out"></i>Daftar</a></li>
                     <?php } ?>
-                </div>
-            </header>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
             
             <div class="fs_menu_overlay"></div>
             <div class="hamburger_menu">

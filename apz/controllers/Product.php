@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product extends CI_Controller {
+    
+    public function __construct(){
+        parent::__construct();
+        $this->load->model('user_model');
+        $this->load->model('produk_model');
+    }
 
     public function view($parameter){
         if($parameter=='user'){
@@ -18,8 +24,9 @@ class Product extends CI_Controller {
 
     public function detailProduct($id)
     {
-      $data['view_name'] = 'detailProduct';
-      $this->load->view('toko/main',$data);
+        $data['produk'] = $this->produk_model->getProdukById($id)->result();
+        $data['content'] = 'toko/detailProduct';
+        $this->load->view('dashboard/user/main', $data);
     }
 
 }

@@ -6,6 +6,7 @@ class User extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->model('produk_model');
     }
 
     private function cekLogin(){
@@ -243,12 +244,6 @@ class User extends CI_Controller {
             $this->load->view('dashboard/user/main', $data);
         }
     }
-<<<<<<< Updated upstream
-    
-=======
-
-
->>>>>>> Stashed changes
     public function now(){
         $vol = $this->user_model->getVolunteer();
         if($vol == NULL){
@@ -300,12 +295,9 @@ class User extends CI_Controller {
             $this->load->view('dashboard/user/main', $data);
         }
     }
-<<<<<<< Updated upstream
     
-=======
-
->>>>>>> Stashed changes
     public function shop(){
+        $data['produk'] = $this->produk_model->getProduk()->result();
         $data['content'] = 'dashboard/user/shop';
         $this->load->view('dashboard/user/main', $data);
     }
