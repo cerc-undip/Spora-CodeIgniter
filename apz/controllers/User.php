@@ -54,6 +54,24 @@ class User extends CI_Controller {
                 $this->load->view('dashboard/user/upload_proyek');
             }
         }
+        else if($page == 'daftar_volunteer'){
+            $this->cekNotLogin();
+
+            $cek = $this->user_model->checkVolunteer();
+
+            if($this->input->post('daftar')){
+                if($cek->num_rows() > 0){
+                    redirect(site_url('dashboard'));
+                }
+                else {
+                    $this->actionDaftarVol();
+                }
+            }
+            else {
+                $data['message'] = $this->session->flashdata('msg');
+                $this->load->view('dashboard/user/daftar_volunteer', $data);
+            }
+        }
     }
     
     private function actionLogin(){
@@ -103,6 +121,20 @@ class User extends CI_Controller {
         $this->project_model->addProject();
         echo "Berhasil";
     }
+
+    private function actionDaftarVol(){
+        $cek = $this->user_model->checkVolunteerByKTP($this->input->post('no_ktp'));
+        
+        if($cek->num_rows() == 0){
+            $this->user_model->addVolunteer();
+            $this->session->set_flashdata('msg', '<h1>Terima kasih sudah mendaftar, itikad baik Anda sangat kami apresiasi. Silahkan tunggu sampai Admin Spora mengkonfirmasi pendaftaran Anda.</h1>');
+        }
+        else {
+            $this->session->set_flashdata('msg', '<h1>No. KTP telah terdaftar sebelumnya.</h1>');
+        }
+
+        redirect(site_url('dashboard/daftar-volunteer'));
+    }
     
     public function profile(){
         $data['content'] = 'dashboard/user/profile';
@@ -117,7 +149,7 @@ class User extends CI_Controller {
     public function term(){
         $data['content'] = 'dashboard/user/term';
         $this->load->view('dashboard/user/main', $data);
-    }
+    }//aku harap aku ganteng kaya mas mukhlish
     
     public function policy(){
         $data['content'] = 'dashboard/user/policy';

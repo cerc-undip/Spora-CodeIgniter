@@ -11,6 +11,14 @@ class User_model extends CI_Model {
     return $this->db->get_where('akun', $where);
   }
 
+  public function checkVolunteer(){
+    return $this->db->get_where('volunteer', ['id_akun' => $this->session->userdata('id_akun')]);
+  }
+
+  public function checkVolunteerByKTP($ktp){
+    return $this->db->get_where('volunteer', ['no_ktp' => $ktp]);
+  }
+
   public function getUser($email){
     $where = array(
       'email' => $email
@@ -28,6 +36,20 @@ class User_model extends CI_Model {
     );
 
     $this->db->insert('akun', $data);
+  }
+
+  public function addVolunteer(){
+    $data = array(
+      'id_akun' => $this->session->userdata('id_akun'),
+      'status'  => $this->input->post('status'),
+      'prov'    => $this->input->post('prov'),
+      'kab'     => $this->input->post('kab'),
+      'kec'     => $this->input->post('kec'),
+      'jalan'   => $this->input->post('jalan'),
+      'no_ktp'  => $this->input->post('no_ktp')
+    );
+
+    $this->db->insert('volunteer', $data);
   }
 
 }
