@@ -52,23 +52,22 @@ $user = $this->db->query($q)->row();
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input type="text" name="kab" class="form-control" placeholder="Kabupaten" required>
+                            <input type="text" name="kab" class="form-control" placeholder="Kabupaten" value="<?= $user->kab; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input type="text" name="kec" class="form-control" placeholder="Kecamatan" required>
+                            <input type="text" name="kec" class="form-control" placeholder="Kecamatan" value="<?= $user->kec; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input type="text" name="jalan" class="form-control" placeholder="Jalan" required>
+                            <input type="text" name="jalan" class="form-control" placeholder="Jalan" value="<?= $user->jalan; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
                             <select class="form-control" name="status">
-                              <option>--- Mendaftar Sebagai ---</option>
                               <option value="P">Publisher</option>
                               <option value="T">Trainer</option>
                               <option value="D">Keduanya</option>

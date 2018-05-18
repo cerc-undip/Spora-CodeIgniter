@@ -27,27 +27,31 @@
         </div>
         <div class="col-md-8">
             <div class="card card-body">
-                <h4 class="card-title">&nbsp;Tambah Proyek Baru</h4>
-                <form action="<?= site_url('dashboard/upload-project') ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <?= $message; ?>
+                <h4 class="card-title">&nbsp;Tambah Produk Baru</h4>
+                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" name="nama" placeholder="Nama" required>
+                            <input type="text" class="form-control" name="nama_produk" placeholder="Nama Produk" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input type="text" name="tempat" class="form-control" required placeholder="Tempat">
+                            <input type="number" name="harga" class="form-control" placeholder="Harga" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <textarea class="form-control" id="inputExperience" name="desk" placeholder="Deskripsi"></textarea>
+                            <input type="number" name="stok" class="form-control" placeholder="Stok" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <textarea class="form-control" id="inputExperience" name="desk" placeholder="Deskripsi" required></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input type="file" class="form-control" placeholder="Foto" name="foto">
+                            <input type="file" class="form-control" placeholder="Foto" name="foto" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -60,3 +64,32 @@
         </div>
     </div>
 </div>
+
+<script>
+$(function () {
+    $("#ubah-pass").click(function(e) {
+        var password  = $("#password").val();
+        var password2 = $("#password2").val();
+
+        if(password.length < 6){
+          $("#pass-error-message").empty();
+          $("#pass-error-message").append("<div class=\"alert alert-danger\">Password minimal 6 karakter alfanumerik.</div>")
+          return false;
+        }
+
+        if (password != password2) {
+          $("#pass-error-message").empty();
+          $("#pass-error-message").append("<div class=\"alert alert-danger\">Password tidak cocok.</div>")
+          return false;
+        }
+
+        return true;
+    });
+
+    <?php if($message){ ?>
+
+    swal("", "<?= $message; ?>", "<?= $type; ?>");
+
+    <?php } ?>
+});
+</script>

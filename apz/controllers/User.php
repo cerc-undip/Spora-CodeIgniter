@@ -244,6 +244,7 @@ class User extends CI_Controller {
             $this->load->view('dashboard/user/main', $data);
         }
     }
+
     public function now(){
         $vol = $this->user_model->getVolunteer();
         if($vol == NULL){
@@ -295,7 +296,7 @@ class User extends CI_Controller {
             $this->load->view('dashboard/user/main', $data);
         }
     }
-    
+
     public function shop(){
         $data['produk'] = $this->produk_model->getProduk()->result();
         $data['content'] = 'dashboard/user/shop';
