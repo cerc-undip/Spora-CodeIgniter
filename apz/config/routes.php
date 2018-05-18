@@ -13,5 +13,9 @@ $route['temp'] = 'welcome/temp';
 $route['login'] = 'user/view/login';
 $route['sudo'] = 'admin/view/login';
 
-//register
+//Register
 $route['register'] = 'user/view/register';
+
+//Dashboard
+$route['dashboard/user'] = 'user/view/dashboard';
+$route['dashboard/admin'] = 'admin/view/dashboard';
