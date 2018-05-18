@@ -41,12 +41,12 @@
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 								<li class="account">
 									<a href="#"><i class="fa fa-user" style="min-width:30px"></i>
-                    <?php if($this->session->userdata('nama')){
-                      echo explode(" ", $this->session->userdata('nama'))[0];
-                    } else { ?>
-                      &nbsp; Akun
-                    <?php } ?>
-                  </a>
+                                        <?php if($this->session->userdata('nama')){
+                                          echo explode(" ", $this->session->userdata('nama'))[0];
+                                        } else { ?>
+                                          &nbsp; Akun
+                                        <?php } ?>
+                                    </a>
 									<ul class="account_selection" style="width:200px">
 										<?php if($this->session->userdata('login')){ ?>
 											<li><a href="<?= site_url('profile'); ?>"><i class="fa fa-user-circle"></i>Profil</a></li>
@@ -102,12 +102,14 @@
 
 	<!-- Slider -->
 
-	<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel1.jpg); margin-top: 50px;">
+	<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel1.jpg); margin-top: 125px; margin-left:20px; margin-right:20px">
 		<div class="container fill_height">
 			<div class="row align-items-center fill_height">
 				<div class="col">
 					<div class="main_slider_content">
-
+                        <div class="main_slider_content" style="padding-left:12%; padding-top:5%">
+                            <h1>#Merekah, Menyejahterakan Nusantara</h1>
+					   </div>
 					</div>
 				</div>
 			</div>
@@ -684,7 +686,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="footer_nav_container">
-						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd. SPECTCORE</div>
+						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd. <b>SPECTCORE</b></div>
 					</div>
 				</div>
 			</div>

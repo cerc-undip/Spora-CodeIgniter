@@ -132,7 +132,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="footer_nav_container">
-						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd. SPECTCORE</div>
+						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd. <b>SPECTCORE</b></div>
 					</div>
 				</div>
 			</div>
