@@ -19,7 +19,13 @@ class User extends CI_Controller {
             }
         }
         else if($page=='register'){
-            $this->load->view('register/user');
+            if($this->input->post('register')){
+                $this->actionRegister();
+            }
+            else {
+                $data['message'] = $this->session->flashdata('msg');
+                $this->load->view('register/user', $data);
+            }
         } else if($page=='dashboard'){
             $this->load->view('dashboard/user/main');
         }
@@ -50,5 +56,18 @@ class User extends CI_Controller {
         }
 
         redirect(site_url('login'));
+    }
+
+    private function actionRegister(){
+        $cekEmail = $this->user_model->checkEmail($this->input->post('email'));
+        if($cekEmail->num_rows() == 0){
+            $this->user_model->addUser($this->input->post());
+            redirect(site_url());
+        }
+        else {
+            $this->session->set_flashdata('msg', '<div class="alert alert-info">Email sudah terdaftar. <a href="'. site_url('login') .'">Masuk disini</a></div>');
+        }
+
+        redirect(site_url('register'));
     }
 }
