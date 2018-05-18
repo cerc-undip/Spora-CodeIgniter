@@ -15,15 +15,16 @@
 </head>
 
 <body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login-01.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden">
-
 <div class="login-box">
   <center>
-    <img src="<?php echo base_url();?>assets/img/logo.png" style="">
+    <a href="<?= site_url(); ?>">
+      <img src="<?php echo base_url();?>assets/img/logo.png" style="">
+    </a>
   </center>
 
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <br>
 
   <div class="login-box-body">
     <p class="login-box-msg">Masuk sebagai user</p>
@@ -52,9 +53,7 @@
 
     </br>
     <a href="<?php echo base_url('register'); ?>" class="text-center">Register a new membership</a>
-
   </div>
-
 </div>
 
 <script src="<?php echo base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>

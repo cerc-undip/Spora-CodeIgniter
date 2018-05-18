@@ -17,7 +17,9 @@
 <body class="hold-transition register-page " style="background:url(<?php echo base_url();?>assets/img/login-01.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden">
   <div class="register-box">
     <center>
-      <img src="<?php echo base_url();?>assets/img/logo.png" style="">
+      <a href="<?= site_url(); ?>">
+        <img src="<?php echo base_url();?>assets/img/logo.png" style="">
+      </a>
     </center>
     <br>
     <br>
