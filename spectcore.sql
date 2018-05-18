@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 18 Mei 2018 pada 08.18
+-- Generation Time: 18 Mei 2018 pada 17.54
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -50,16 +50,17 @@ CREATE TABLE `akun` (
   `id` int(4) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `nama` varchar(100) NOT NULL
+  `nama` varchar(100) NOT NULL,
+  `priv` char(1) NOT NULL DEFAULT 'U'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `akun`
 --
 
-INSERT INTO `akun` (`id`, `email`, `password`, `nama`) VALUES
-(1, 'me@spectcore.com', '$2y$10$MrkIiDOdnmBH17KL.Usm.eNhKwKOo1a3iqOGXigbGobof7VFLyXA2', 'Spectcore'),
-(2, 'fnyhsbi@gmail.com', '$2y$10$zfH34edGRAULlwa8brz6neOsCCCUE/31UDLd/lQYEbns..HBTb8Gu', 'Fanny Hasbi');
+INSERT INTO `akun` (`id`, `email`, `password`, `nama`, `priv`) VALUES
+(1, 'me@spectcore.com', '$2y$10$MrkIiDOdnmBH17KL.Usm.eNhKwKOo1a3iqOGXigbGobof7VFLyXA2', 'Spectcore', ''),
+(2, 'fnyhsbi@gmail.com', '$2y$10$zfH34edGRAULlwa8brz6neOsCCCUE/31UDLd/lQYEbns..HBTb8Gu', 'Fanny Hasbi', '');
 
 -- --------------------------------------------------------
 
@@ -85,6 +86,18 @@ CREATE TABLE `detail_pesan` (
   `kode_pesan` varchar(8) NOT NULL,
   `id_produk` int(6) NOT NULL,
   `jumlah` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `foto_proyek`
+--
+
+CREATE TABLE `foto_proyek` (
+  `id` int(4) NOT NULL,
+  `id_proyek` int(4) NOT NULL,
+  `alamat` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -141,12 +154,26 @@ CREATE TABLE `produk` (
 
 CREATE TABLE `proyek` (
   `id` int(4) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `id_vol` int(4) NOT NULL,
   `tempat` varchar(100) NOT NULL,
-  `tgl` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `tgl` datetime DEFAULT CURRENT_TIMESTAMP,
   `desk` text NOT NULL,
-  `status` char(1) NOT NULL DEFAULT 'B'
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `slug` varchar(50) NOT NULL,
+  `foto_utama` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `proyek`
+--
+
+INSERT INTO `proyek` (`id`, `nama`, `id_vol`, `tempat`, `tgl`, `desk`, `status`, `slug`, `foto_utama`) VALUES
+(1, 'Mengenal masyarakat batu', 1, 'Brebes', '2018-05-18 19:43:02', 'asa', 0, 'mengenal-masyarakat-batu', 'awaw.jpg'),
+(2, 'Membuat Sepatu Desa Karigiwangan', 3, 'Brebes', '2018-05-18 21:38:20', 'Hehehe cuma contoh', 0, 'membuat-sepatu-desa-karigiwangan', 'awaw.jpg'),
+(3, 'Fanny Hasbi', 3, 'Brebes', '2018-05-18 21:41:42', 'Asa', 0, 'fanny-hasbi', 'awaw.jpg'),
+(4, 'Fanny Hasbi', 3, 'Brebes', '2018-05-18 21:55:22', 'fasasa', 0, 'fanny-hasbi', 'prj_w7l07nlwmv50.jpg'),
+(5, 'Cahyo', 3, 'Semarang', '2018-05-18 21:57:20', 'vasa', 0, 'cahyo', 'prj_j3iervrjslly.jpg');
 
 -- --------------------------------------------------------
 
@@ -192,8 +219,17 @@ CREATE TABLE `volunteer` (
   `kab` varchar(50) NOT NULL,
   `kec` varchar(50) NOT NULL,
   `jalan` varchar(50) DEFAULT NULL,
-  `no_ktp` varchar(16) NOT NULL
+  `no_ktp` varchar(16) NOT NULL,
+  `telp` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `volunteer`
+--
+
+INSERT INTO `volunteer` (`id`, `id_akun`, `status`, `confirmed`, `prov`, `kab`, `kec`, `jalan`, `no_ktp`, `telp`) VALUES
+(1, 2, 'P', 0, 'Jawa Tengah', 'Brebes', 'Brebes', 'M. Yamin No. 47', '3329xxxxxxxxxxxx', NULL),
+(3, 1, 'T', 1, 'Jawa Tengah', 'Brebes', 'Brebes', 'Jl. M. Yamin No. 47', '332xxxxxxxxxxxxx', NULL);
 
 --
 -- Indexes for dumped tables
@@ -229,6 +265,13 @@ ALTER TABLE `detail_pesan`
   ADD KEY `id_produk` (`id_produk`);
 
 --
+-- Indexes for table `foto_proyek`
+--
+ALTER TABLE `foto_proyek`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_proyek` (`id_proyek`);
+
+--
 -- Indexes for table `konfirmasi_vol`
 --
 ALTER TABLE `konfirmasi_vol`
@@ -253,7 +296,8 @@ ALTER TABLE `produk`
 -- Indexes for table `proyek`
 --
 ALTER TABLE `proyek`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_vol` (`id_vol`);
 
 --
 -- Indexes for table `restok_produk`
@@ -302,6 +346,11 @@ ALTER TABLE `ambil_proyek`
 ALTER TABLE `detail_pesan`
   MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `foto_proyek`
+--
+ALTER TABLE `foto_proyek`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `konfirmasi_vol`
 --
 ALTER TABLE `konfirmasi_vol`
@@ -315,7 +364,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `proyek`
 --
 ALTER TABLE `proyek`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `restok_produk`
 --
@@ -330,7 +379,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `volunteer`
 --
 ALTER TABLE `volunteer`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
@@ -350,6 +399,12 @@ ALTER TABLE `detail_pesan`
   ADD CONSTRAINT `detail_pesan_ibfk_2` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id`);
 
 --
+-- Ketidakleluasaan untuk tabel `foto_proyek`
+--
+ALTER TABLE `foto_proyek`
+  ADD CONSTRAINT `foto_proyek_ibfk_1` FOREIGN KEY (`id_proyek`) REFERENCES `proyek` (`id`);
+
+--
 -- Ketidakleluasaan untuk tabel `konfirmasi_vol`
 --
 ALTER TABLE `konfirmasi_vol`
@@ -361,6 +416,12 @@ ALTER TABLE `konfirmasi_vol`
 --
 ALTER TABLE `pesan`
   ADD CONSTRAINT `pesan_ibfk_1` FOREIGN KEY (`id_pemesan`) REFERENCES `user` (`id`);
+
+--
+-- Ketidakleluasaan untuk tabel `proyek`
+--
+ALTER TABLE `proyek`
+  ADD CONSTRAINT `proyek_ibfk_1` FOREIGN KEY (`id_vol`) REFERENCES `volunteer` (`id`);
 
 --
 -- Ketidakleluasaan untuk tabel `restok_produk`
