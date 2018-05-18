@@ -20,4 +20,14 @@ class User_model extends CI_Model {
     return $q->row();
   }
 
+  public function addUser($datas){
+    $data = array(
+      'email'    => $datas['email'],
+      'password' => password_hash($datas['password'], PASSWORD_BCRYPT),
+      'nama'     => $datas['nama']
+    );
+
+    $this->db->insert('akun', $data);
+  }
+
 }
