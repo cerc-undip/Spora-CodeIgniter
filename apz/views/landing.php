@@ -150,7 +150,7 @@
 						<div class="product-item men">
 							<div class="product discount product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product1.jpg" alt="">
 								</div>
 								<div class="favorite favorite_left"></div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
@@ -167,7 +167,7 @@
 						<div class="product-item women">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product2.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
@@ -184,7 +184,7 @@
 						<div class="product-item women">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product3.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -200,7 +200,7 @@
 						<div class="product-item accessories">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product4.jpg" alt="">
 								</div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
 								<div class="favorite favorite_left"></div>
@@ -217,7 +217,7 @@
 						<div class="product-item women men">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product5.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -233,7 +233,7 @@
 						<div class="product-item accessories">
 							<div class="product discount product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product1.jpg" alt="">
 								</div>
 								<div class="favorite favorite_left"></div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
@@ -250,7 +250,7 @@
 						<div class="product-item women">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product2.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -266,7 +266,7 @@
 						<div class="product-item accessories">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product3.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -282,7 +282,7 @@
 						<div class="product-item men">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product4.jpg" alt="">
 								</div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
 								<div class="favorite favorite_left"></div>
@@ -299,7 +299,7 @@
 						<div class="product-item men">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/product5.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -663,17 +663,17 @@
 				<div class="col-lg-4">
                     <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
 				        <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Kontak</button>
-				    </div>  
+				    </div>
 				</div>
 				<div class="col-lg-4">
                     <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
 				        <h5>cs@spora.com</h5>
-				    </div>  
+				    </div>
 				</div>
                 <div class="col-lg-4">
                     <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
 				        <h5>+0295 180 518</h5>
-				    </div>  
+				    </div>
 				</div>
 			</div>
 		</div>
