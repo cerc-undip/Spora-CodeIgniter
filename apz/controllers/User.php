@@ -47,15 +47,7 @@ class User extends CI_Controller {
         }
         else if($page == 'dashboard'){
             $this->cekNotLogin();
-            if($this->input->post('now')){
-                $this->now();
-            } else if($this->input->post('own')){
-                $this->own();
-            } else if($this->input->post('addProject')){
-                $this->addProject();
-            } else {
-                $this->now();
-            }
+            $this->now();
         }
         else if($page == 'upload_project'){
             $this->cekNotLogin();
@@ -225,6 +217,11 @@ class User extends CI_Controller {
             $this->load->view('dashboard/user/main', $data);
         }
     }
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> 6e631a540013b2683ae71df711b3447ff60fb314
     
     public function now(){
         $data['content'] = 'dashboard/user/dashboard_now';
@@ -242,6 +239,15 @@ class User extends CI_Controller {
         $this->load->view('dashboard/user/main', $data);
     }
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
+=======
+>>>>>>> 6e631a540013b2683ae71df711b3447ff60fb314
     public function shop(){
         $data['content'] = 'dashboard/user/shop';
         $this->load->view('dashboard/user/main', $data);

@@ -52,9 +52,9 @@
 							</div>
 						</div>
 					</div>
+					<div class="red_button shop_now_button"><a href="#">Daftar</a></div>
 
 					<!-- Tab Reviews -->
-
 
 				</div>
 			</div>
