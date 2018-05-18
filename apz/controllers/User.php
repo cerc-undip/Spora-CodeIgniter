@@ -80,6 +80,11 @@ class User extends CI_Controller {
         redirect(site_url('register'));
     }
     
+    public function profile(){
+        $data['content'] = 'dashboard/user/profile';
+        $this->load->view('dashboard/user/main', $data);
+    }
+    
     public function help(){
         $data['content'] = 'dashboard/user/help';
         $this->load->view('dashboard/user/main', $data);

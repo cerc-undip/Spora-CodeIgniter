@@ -28,7 +28,7 @@
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
-								<li><a href="<?= site_url('dashboard'); ?>">Beranda</a></li>
+								<li><a href="<?= site_url(); ?>">Beranda</a></li>
 								<li><a href="#">Toko</a></li>
 								<li><a href="<?= site_url('proyek'); ?>">Relawan</a></li>
                                 <li class="account">
@@ -78,9 +78,9 @@
 					<ul class="menu_selection">
 						<?php if($this->session->userdata('login')){ ?>
 
-							<li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i>Profil</a></li>
-							<li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard</a></li>
-							<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Keluar</a></li>
+							<li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i> Profil</a></li>
+							<li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard" aria-hidden="true"></i> Dashboard</a></li>
+							<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Keluar</a></li>
 
 						<?php } else { ?>
 

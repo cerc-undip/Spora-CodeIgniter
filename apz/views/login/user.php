@@ -50,6 +50,46 @@
         </div>
       </div>
     </form>
+      
+<!--
+      <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-12 control-label">Name</label>
+                    <div class="col-sm-12">
+                        <input type="email" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-12 control-label">Email</label>
+                    <div class="col-sm-12">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-12 control-label">Name</label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputExperience" class="col-sm-12 control-label">Pengalaman</label>
+                    <div class="col-md-12">
+                        <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-12">
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                </div>
+            </form>
+-->
 
     </br>
     <a href="<?php echo base_url('register'); ?>" class="text-center">Register a new membership</a>
