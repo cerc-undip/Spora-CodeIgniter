@@ -35,8 +35,8 @@
                                 <li class="account">
                                     <a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
                                     <ul class="account_selection">
-										<li><a href="#"><i class="fa fa-user-circle"></i>Profil</a></li>
-										<li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+										<li><a href="#"><i class="fa fa fa-sign-in"></i>Masuk</a></li>
+										<li><a href="#"><i class="fa fa-plus-circle"></i>Daftar</a></li>
 									</ul>
                                 </li>
 							</ul>
