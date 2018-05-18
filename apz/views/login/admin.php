@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login User</title>
+        <title>Login Admin</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/bootstrap4/bootstrap.min.css">
         <link href="<?= base_url() ?>assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -25,38 +25,35 @@
             </center>
             <br />
             <center>
-            <div class="card card-body" id="login" style="width:40%">
-                <h5 class="card-title">Selamat datang kembali</h5>
-                <form class="form-horizontal" action="<?= site_url('login') ?>" method="post">
-                    <div class="form-group">
-                        
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-8">
-                            <input type="email" name="email" class="form-control" placeholder="email">
-                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <div class="card card-body" id="login" style="width:40%">
+                    <h5 class="card-title">Selamat datang kembali</h5>
+                    <form class="form-horizontal" action="<?= site_url('sudo') ?>" method="post">
+                        <div class="form-group">
+                            <div id="error-message" class="col-sm-8">
+                                <?= $message; ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-8">
-                            <input type="password" name="password" class="form-control" placeholder="password">
-                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        <div class="form-group">
+                            <div class="col-sm-8">
+                                <input type="text" name="username" class="form-control" placeholder="Username">
+                                <span class="form-control-feedback"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-8">
-                            <input type="submit" name="register" id="btn" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat" value="Masuk">
+                        <div class="form-group">
+                            <div class="col-sm-8">
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                <span class="form-control-feedback"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div style="text-align: right;">
-                        <a href="<?= base_url('register'); ?>" >Saya ingin mendaftar</a>
-                    </div>
-
-                </form>
-            </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-8">
+                                <input type="submit" name="login" id="btn" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat" value="Masuk">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </center>
         </div>
-
         <script src="<?php echo base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>
         <script src="<?php echo base_url() ?>assets/component/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url() ?>assets/plugins/iCheck/icheck.min.js"></script>

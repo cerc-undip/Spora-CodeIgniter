@@ -11,7 +11,7 @@ $route['logout'] = 'home/logout';
 //Login
 $route['login'] = 'user/view/login';
 $route['sudo'] = 'admin/view/login';
-
+$route['sudo/log'] = 'admin/actionLogin';
 //Register
 $route['register'] = 'user/view/register';
 
@@ -20,7 +20,7 @@ $route['dashboard'] = 'user/view/dashboard';
 $route['dashboard/now'] = 'user/now';
 $route['dashboard/own'] = 'user/own';
 $route['dashboard/add'] = 'user/addProject';
-$route['dash-admin'] = 'admin/view/dashboard';
+$route['dash-admin'] = 'admin/mainMenu';
 
 //Project
 $route['project'] = 'project';
@@ -32,6 +32,13 @@ $route['profile'] = 'user/profile';
 //Shop
 $route['shop'] = 'user/shop';//
 $route['detailProduct/(:any)'] = 'product/detailProduct/$1';
+
+//Product
+$route['product/add'] = 'admin/addProduct';
+
+//Verification
+$route['verify/user'] = 'admin/mainMenu';
+$route['verify/project'] = 'admin/verifProject';
 
 //Term and Condition
 $route['help'] = 'user/help';
