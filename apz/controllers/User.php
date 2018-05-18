@@ -124,7 +124,12 @@ class User extends CI_Controller {
         $data['content'] = 'dashboard/user/profile';
         $this->load->view('dashboard/user/main', $data);
     }
-
+    
+    public function shop(){
+        $data['content'] = 'dashboard/user/shop';
+        $this->load->view('dashboard/user/main', $data);
+    }
+    
     public function help(){
         $data['content'] = 'dashboard/user/help';
         $this->load->view('dashboard/user/main', $data);

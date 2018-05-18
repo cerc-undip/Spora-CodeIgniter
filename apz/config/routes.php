@@ -20,11 +20,14 @@ $route['dashboard'] = 'user/view/dashboard';
 $route['dash-admin'] = 'admin/view/dashboard';
 
 //Project
-$route['proyek'] = 'project';
-$route['detailProyek/(:any)'] = 'project/detailProyek/$1';
+$route['project'] = 'project';
+$route['detailProject/(:any)'] = 'project/detailProject/$1';
 
 //Profile
 $route['profile'] = 'user/profile';
+
+//Shop
+$route['shop'] = 'user/shop';
 
 //Term and Condition
 $route['help'] = 'user/help';
@@ -34,9 +37,7 @@ $route['policy'] = 'user/policy';
 //Logout
 $route['logout'] = 'home/logout';
 
-
-
 //Fungsi dulu, desain belakangan
-//Kalo udah ada desain baru pindah keatas
-$route['dashboard/upload-proyek'] = 'user/view/upload_proyek';
+
 $route['dashboard/daftar-volunteer'] = 'user/view/daftar_volunteer';
+$route['dashboard/upload-project'] = 'user/view/upload_project';

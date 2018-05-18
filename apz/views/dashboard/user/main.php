@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Spora</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Colo Shop Template">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/bootstrap4/bootstrap.min.css">
-<link href="<?= base_url() ?>assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/main_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/custom.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
-</head>
+    <head>
+        <title>Spora</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Colo Shop Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/bootstrap4/bootstrap.min.css">
+        <link href="<?= base_url() ?>assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/animate.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/main_styles.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/categories_styles.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/categories_responsive.css">
+    </head>
 <body>
 	<div class="super_container">
 	<!-- Header -->
@@ -29,7 +32,7 @@
 						<nav class="navbar">
                             <ul class="navbar_menu">
                                 <li><a href="<?= site_url(''); ?>">Beranda</a></li>
-								<li><a href="#">Toko</a></li>
+								<li><a href="<?= site_url('shop'); ?>">Toko</a></li>
 								<li><a href="<?= site_url('proyek'); ?>">Relawan</a></li>
                                 <li class="account">
                                     <a href="#">Tentang</a>
@@ -68,7 +71,6 @@
 				</div>
 			</div>
 		</div>
-
 	</header>
 
 	<div class="fs_menu_overlay"></div>
@@ -148,6 +150,8 @@
 <script src="<?php echo base_url(); ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/easing/easing.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/coloshop/custom.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/coloshop/categories_custom.js"></script>
 </body>
 
 </html>

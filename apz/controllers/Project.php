@@ -8,9 +8,9 @@ class Project extends CI_Controller {
         $this->load->view('template/main', $data);
     }
 
-    public function detailProyek($id)
+    public function detailProject($id)
     {
-      $data['view_name'] = 'detailProyek';
+      $data['view_name'] = 'detailProject';
       $this->load->view('template/main',$data);
 
     }
