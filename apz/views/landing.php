@@ -108,7 +108,7 @@
 				<div class="col">
 					<div class="main_slider_content">
                         <div class="main_slider_content" style="padding-left:12%; padding-top:5%">
-                            <h1>#Merekah, Menyejahterakan Nusantara</h1>
+                            <h1>Merekah, Menyejahterakan Nusantara</h1>
 					   </div>
 					</div>
 				</div>

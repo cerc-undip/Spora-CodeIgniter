@@ -1,4 +1,4 @@
-<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel<?php echo(rand(1,3));  ?>.jpg); margin-top: 100px;">
+<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel<?php echo(rand(1,3));  ?>.jpg); margin-top: 125px; margin-left:20px; margin-right:20px;">
     <div class="container fill_height">
       <div class="row align-items-center fill_height">
         <div class="col">
