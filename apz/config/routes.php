@@ -6,6 +6,8 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['logout'] = 'home/logout';
+
 //Login
 $route['login'] = 'user/view/login';
 $route['sudo'] = 'admin/view/login';
@@ -17,5 +19,5 @@ $route['register'] = 'user/view/register';
 $route['dashboard'] = 'user/view/dashboard';
 $route['dash-admin'] = 'admin/view/dashboard';
 
-
-$route['logout'] = 'home/logout';
+// Proyek
+$route['proyek'] = 'project';

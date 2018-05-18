@@ -29,8 +29,8 @@
 							<ul class="navbar_menu">
 								<li><a href="#">Beranda</a></li>
 								<li><a href="#">Toko</a></li>
-								<li><a href="#">Relawan</a></li>
-								<li><a href="contact.html">Tentang</a></li>
+								<li><a href="<?= site_url('proyek'); ?>">Relawan</a></li>
+								<li><a href="#">Tentang</a></li>
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 								<li class="account">
 									<a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
