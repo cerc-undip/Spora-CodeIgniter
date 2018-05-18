@@ -10,10 +10,16 @@ class Product extends CI_Controller {
             $this->load->view('login/'.$parameter);
         }
     }
-    
+
     public function actionLogin(){
         $email = $this->$input->post('etEmail');
         $password = $this->$input->post('etPassword');
     }
-        
+
+    public function detailProduct($id)
+    {
+      $data['view_name'] = 'detailProduct';
+      $this->load->view('toko/main',$data);
+    }
+
 }

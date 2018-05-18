@@ -30,7 +30,8 @@ $route['detailProject/(:any)'] = 'project/detailProject/$1';
 $route['profile'] = 'user/profile';
 
 //Shop
-$route['shop'] = 'user/shop';
+$route['shop'] = 'user/shop';//
+$route['detailProduct/(:any)'] = 'product/detailProduct/$1';
 
 //Term and Condition
 $route['help'] = 'user/help';
