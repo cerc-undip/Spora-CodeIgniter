@@ -27,7 +27,7 @@
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
-								<li><a href="#">Beranda</a></li>
+								<li><a href="<?= site_url('dashboard'); ?>">Beranda</a></li>
 								<li><a href="#">Toko</a></li>
 								<li><a href="<?= site_url('proyek'); ?>">Relawan</a></li>
 								<li><a href="#">Tentang</a></li>
@@ -42,7 +42,7 @@
 											<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out"></i>Keluar</a></li>
 
 										<?php } else { ?>
-										
+
 											<li><a href="<?= site_url('login'); ?>"><i class="fa fa-user-circle"></i>Masuk</a></li>
 											<li><a href="<?= site_url('register'); ?>"><i class="fa fa-sign-out"></i>Daftar</a></li>
 
@@ -70,7 +70,7 @@
 				<li class="menu_item has-children"><a href="#">Akun Saya<i class="fa fa-angle-down"></i></a>
 					<ul class="menu_selection">
 						<?php if($this->session->userdata('login')){ ?>
-							
+
 							<li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i>Profil</a></li>
 							<li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard</a></li>
 							<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Keluar</a></li>
@@ -610,7 +610,7 @@
 			<div class="row blogs_container">
 				<div class="col-lg-4 blog_item_col">
 					<div class="blog_item">
-						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/carousel3.jpg)"></div>
+						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project1.jpg)"></div>
 						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
 							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
 							<span class="blog_meta">by admin | dec 01, 2017</span>
@@ -620,7 +620,7 @@
 				</div>
 				<div class="col-lg-4 blog_item_col">
 					<div class="blog_item">
-						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/carousel3.jpg)"></div>
+						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project2.jpg)"></div>
 						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
 							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
 							<span class="blog_meta">by admin | dec 01, 2017</span>
@@ -630,7 +630,7 @@
 				</div>
 				<div class="col-lg-4 blog_item_col">
 					<div class="blog_item">
-						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/carousel3.jpg)"></div>
+						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project3.jpg)"></div>
 						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
 							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
 							<span class="blog_meta">by admin | dec 01, 2017</span>

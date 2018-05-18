@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Colo Shop Template">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/bootstrap4/bootstrap.min.css">
-<link href="<?= base_url() ?>assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/main_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/css/coloshop/bootstrap4/bootstrap.min.css">
+<link href="<?php base_url() ?>assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/css/coloshop/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/css/coloshop/responsive.css">
 </head>
 <body>
 	<div class="super_container">
@@ -23,14 +23,14 @@
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<img src="<?= base_url();?>assets/img/logo.png" style="">
+							<img src="<?php echo base_url();?>assets/img/logo.png" style="">
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
-								<li><a href="#">Beranda</a></li>
+								<li><a href="<?= site_url('dashboard'); ?>">Beranda</a></li>
 								<li><a href="#">Toko</a></li>
-								<li><a href="#">Relawan</a></li>
-								<li><a href="contact.html">Tentang</a></li>
+								<li><a href="<?= site_url('proyek'); ?>">Relawan</a></li>
+								<li><a href="#">Tentang</a></li>
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 								<li class="account">
 									<a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
@@ -42,7 +42,7 @@
 											<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out"></i>Keluar</a></li>
 
 										<?php } else { ?>
-										
+
 											<li><a href="<?= site_url('login'); ?>"><i class="fa fa-user-circle"></i>Masuk</a></li>
 											<li><a href="<?= site_url('register'); ?>"><i class="fa fa-sign-out"></i>Daftar</a></li>
 
@@ -70,7 +70,7 @@
 				<li class="menu_item has-children"><a href="#">Akun Saya<i class="fa fa-angle-down"></i></a>
 					<ul class="menu_selection">
 						<?php if($this->session->userdata('login')){ ?>
-							
+
 							<li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i>Profil</a></li>
 							<li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard</a></li>
 							<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Keluar</a></li>
@@ -94,14 +94,12 @@
 
 	<!-- Slider -->
 
-	<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel1.jpg)">
+	<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel1.jpg); margin-top: 50px;">
 		<div class="container fill_height">
 			<div class="row align-items-center fill_height">
 				<div class="col">
 					<div class="main_slider_content">
-						<h6>Spring / Summer Collection 2017</h6>
-						<h1>Get up to 30% Off New Arrivals</h1>
-						<div class="red_button shop_now_button"><a href="#">shop now</a></div>
+
 					</div>
 				</div>
 			</div>
@@ -110,34 +108,6 @@
 
 	<!-- Banner -->
 
-	<div class="banner">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="banner_item align-items-center" style="background-image:url(images/banner_1.jpg)">
-						<div class="banner_category">
-							<a href="categories.html">women's</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="banner_item align-items-center" style="background-image:url(images/banner_2.jpg)">
-						<div class="banner_category">
-							<a href="categories.html">accessories's</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="banner_item align-items-center" style="background-image:url(images/banner_3.jpg)">
-						<div class="banner_category">
-							<a href="categories.html">men's</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- New Arrivals -->
 
 	<div class="new_arrivals">
@@ -145,7 +115,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title new_arrivals_title">
-						<h2>New Arrivals</h2>
+						<h2>Baru</h2>
 					</div>
 				</div>
 			</div>
@@ -342,7 +312,7 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<div class="deal_ofthe_week_img">
-						<img src="<?php echo base_url();?>assets/img/carousel2.jpg" alt="">
+						<img src="<?php echo base_url();?>assets/img/backgroundPromo-01.jpg" alt="">
 					</div>
 				</div>
 				<div class="col-lg-6 text-right deal_ofthe_week_col">
@@ -382,7 +352,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title new_arrivals_title">
-						<h2>Best Sellers</h2>
+						<h2>Penjualan Terlaris</h2>
 					</div>
 				</div>
 			</div>
@@ -590,8 +560,8 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>free shipping</h6>
-							<p>Suffered Alteration in Some Form</p>
+							<h6>Bebas biaya pengiriman</h6>
+							<p>Seluruh pengi</p>
 						</div>
 					</div>
 				</div>
@@ -599,8 +569,8 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>cach on delivery</h6>
-							<p>The Internet Tend To Repeat</p>
+							<h6>Full Diskon</h6>
+							<p>Dapatkan banyak promo dan diskon</p>
 						</div>
 					</div>
 				</div>
@@ -608,8 +578,8 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>45 days return</h6>
-							<p>Making it Look Like Readable</p>
+							<h6>Garansi 1 minggu</h6>
+							<p>Apabila barang rusak dapat diganti</p>
 						</div>
 					</div>
 				</div>
@@ -617,7 +587,7 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>opening all week</h6>
+							<h6>Layanan Setiap Hari</h6>
 							<p>8AM - 09PM</p>
 						</div>
 					</div>
@@ -633,7 +603,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title">
-						<h2>Latest Blogs</h2>
+						<h2>Jadilah Relawan Spora</h2>
 					</div>
 				</div>
 			</div>
@@ -674,26 +644,6 @@
 
 	<!-- Newsletter -->
 
-	<div class="newsletter">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
-						<h4>Newsletter</h4>
-						<p>Subscribe to our newsletter and get 20% off your first purchase</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<form action="post">
-						<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
-							<input id="newsletter_email" type="email" placeholder="Your email" required="required" data-error="Valid email is required.">
-							<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">subscribe</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
 
@@ -724,7 +674,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="footer_nav_container">
-						<div class="cr">©2018 All Rights Reserverd. This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a></div>
+						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd.</div>
 					</div>
 				</div>
 			</div>
@@ -733,13 +683,13 @@
 
 </div>
 
-<script src="<?= base_url(); ?>assets/js/coloshop/jquery-3.2.1.min.js"></script>
-<script src="<?= base_url(); ?>assets/css/coloshop/bootstrap4/popper.js"></script>
-<script src="<?= base_url(); ?>assets/css/coloshop/bootstrap4/bootstrap.min.js"></script>
-<script src="<?= base_url(); ?>assets/plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="<?= base_url(); ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="<?= base_url(); ?>assets/plugins/easing/easing.js"></script>
-<script src="<?= base_url(); ?>assets/js/coloshop/custom.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/coloshop/jquery-3.2.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/css/coloshop/bootstrap4/popper.js"></script>
+<script src="<?php echo base_url(); ?>assets/css/coloshop/bootstrap4/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/easing/easing.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/coloshop/custom.js"></script>
 </body>
 
 </html>
