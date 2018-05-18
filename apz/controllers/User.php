@@ -50,16 +50,7 @@ class User extends CI_Controller {
             $data['content'] = 'welcome_message';
             $this->load->view('dashboard/user/main',$data);
         }
-        else if($page == 'upload_proyek'){
-            $this->cekNotLogin();
-            if($this->input->post('upload')){
-              $this->actionUploadProyek();
-            } else {
-              $data['message'] = $this->session->flashdata('msg');
-              $this->load->view('dashboard/user/upload_proyek', $data);
-            }
-        }
-        else if($page == 'upload_proyek'){
+        else if($page == 'upload_project'){
             $this->cekNotLogin();
             $confirmed = $this->user_model->getVolunteerConfirm();
 
@@ -69,7 +60,7 @@ class User extends CI_Controller {
                 }
                 else {
                     $data['message'] = $this->session->flashdata('msg');
-                    $this->load->view('dashboard/user/upload_proyek', $data);
+                    $this->load->view('dashboard/user/upload_project', $data);
                 }
             }
             else {
@@ -153,7 +144,7 @@ class User extends CI_Controller {
             $this->session->set_flashdata('msg', $message);
         }
 
-        redirect(site_url('dashboard/upload-proyek'));
+        redirect(site_url('dashboard/upload-project'));
     }
 
     private function actionDaftarVol(){
