@@ -36,6 +36,8 @@ class User extends CI_Controller {
                 $this->load->view('register/user', $data);
             }
         } else if($page=='dashboard'){
+            if(!$this->session->userdata('login'))
+                redirect(site_url('login'));
             $this->load->view('dashboard/user/main');
         }
     }
