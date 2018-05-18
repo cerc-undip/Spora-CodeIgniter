@@ -9,3 +9,6 @@ $route['translate_uri_dashes'] = FALSE;
 //LOGIN
 $route['login/(:any)'] = 'login/view/$1';
 $route['login/login'] = 'login/login';
+
+
+$route['temp'] = 'welcome/temp';
