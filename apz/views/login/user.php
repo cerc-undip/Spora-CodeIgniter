@@ -29,23 +29,28 @@
     <p class="login-box-msg">Masuk sebagai user</p>
 
     <form action="<? site_url('login') ?>" method="post">
+      <div class="form-group">
+        <?= $message; ?>
+      </div>
+
       <div class="form-group has-feedback">
-        <input name="etEmail" type="email" class="form-control" placeholder="Email">
+        <input name="email" type="email" class="form-control" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
+      
       <div class="form-group has-feedback">
-        <input name="etPassword" type="password" class="form-control" placeholder="Password">
+        <input name="password" type="password" class="form-control" placeholder="Password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
+      
       <div class="row">
-
         <div class="col-xs-4 ">
-          <button name="btnLogin" type="submit" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat">Sign In</button>
+          <input type="submit" name="login" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat" value="Masuk">
         </div>
-
       </div>
     </form>
-      </br>
+    </br>
+    
     <a href="register.html" class="text-center">Register a new membership</a>
 
   </div>
@@ -57,14 +62,6 @@
 <script src="<?php echo base_url() ?>assets/component/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="<?php echo base_url() ?>assets/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
+
 </body>
 </html>
