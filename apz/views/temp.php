@@ -168,7 +168,7 @@
 
 	<!-- Slider -->
 
-	<div class="main_slider" style="background-image:url(img/[SPORE] Carousel-01.jpg)">
+	<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel1.jpg)">
 		<div class="container fill_height">
 			<div class="row align-items-center fill_height">
 				<div class="col">
@@ -244,7 +244,7 @@
 						<div class="product-item men">
 							<div class="product discount product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite favorite_left"></div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
@@ -261,7 +261,7 @@
 						<div class="product-item women">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
@@ -278,7 +278,7 @@
 						<div class="product-item women">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -294,7 +294,7 @@
 						<div class="product-item accessories">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
 								<div class="favorite favorite_left"></div>
@@ -311,7 +311,7 @@
 						<div class="product-item women men">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -327,7 +327,7 @@
 						<div class="product-item accessories">
 							<div class="product discount product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite favorite_left"></div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
@@ -344,7 +344,7 @@
 						<div class="product-item women">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -360,7 +360,7 @@
 						<div class="product-item accessories">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -376,7 +376,7 @@
 						<div class="product-item men">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
 								<div class="favorite favorite_left"></div>
@@ -393,7 +393,7 @@
 						<div class="product-item men">
 							<div class="product product_filter">
 								<div class="product_image">
-									<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+									<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 								</div>
 								<div class="favorite"></div>
 								<div class="product_info">
@@ -416,7 +416,7 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<div class="deal_ofthe_week_img">
-						<img src="images/deal_ofthe_week.png" alt="">
+						<img src="<?php echo base_url();?>assets/img/carousel2.jpg" alt="">
 					</div>
 				</div>
 				<div class="col-lg-6 text-right deal_ofthe_week_col">
@@ -471,7 +471,7 @@
 								<div class="product-item">
 									<div class="product discount">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite favorite_left"></div>
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
@@ -489,7 +489,7 @@
 								<div class="product-item women">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite"></div>
 										<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
@@ -507,7 +507,7 @@
 								<div class="product-item women">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite"></div>
 										<div class="product_info">
@@ -524,7 +524,7 @@
 								<div class="product-item accessories">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 									</div>
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
 										<div class="favorite favorite_left"></div>
@@ -542,7 +542,7 @@
 								<div class="product-item women men">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite"></div>
 										<div class="product_info">
@@ -559,7 +559,7 @@
 								<div class="product-item accessories">
 									<div class="product discount">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite favorite_left"></div>
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
@@ -577,7 +577,7 @@
 								<div class="product-item women">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite"></div>
 										<div class="product_info">
@@ -594,7 +594,7 @@
 								<div class="product-item accessories">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite"></div>
 										<div class="product_info">
@@ -611,7 +611,7 @@
 								<div class="product-item men">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
 										<div class="favorite favorite_left"></div>
@@ -629,7 +629,7 @@
 								<div class="product-item men">
 									<div class="product">
 										<div class="product_image">
-											<img src="<?php echo base_url();?>assets/img/[SPORE] Products.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/products.jpg" alt="">
 										</div>
 										<div class="favorite"></div>
 										<div class="product_info">
@@ -714,7 +714,7 @@
 			<div class="row blogs_container">
 				<div class="col-lg-4 blog_item_col">
 					<div class="blog_item">
-						<div class="blog_background" style="background-image:url(images/blog_1.jpg)"></div>
+						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/carousel3.jpg)"></div>
 						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
 							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
 							<span class="blog_meta">by admin | dec 01, 2017</span>
@@ -724,7 +724,7 @@
 				</div>
 				<div class="col-lg-4 blog_item_col">
 					<div class="blog_item">
-						<div class="blog_background" style="background-image:url(images/blog_2.jpg)"></div>
+						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/carousel3.jpg)"></div>
 						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
 							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
 							<span class="blog_meta">by admin | dec 01, 2017</span>
@@ -734,7 +734,7 @@
 				</div>
 				<div class="col-lg-4 blog_item_col">
 					<div class="blog_item">
-						<div class="blog_background" style="background-image:url(images/blog_3.jpg)"></div>
+						<div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/carousel3.jpg)"></div>
 						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
 							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
 							<span class="blog_meta">by admin | dec 01, 2017</span>
