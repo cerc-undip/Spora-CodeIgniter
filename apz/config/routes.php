@@ -17,6 +17,9 @@ $route['register'] = 'user/view/register';
 
 //Dashboard
 $route['dashboard'] = 'user/view/dashboard';
+$route['dashboard/now'] = 'user/now';
+$route['dashboard/own'] = 'user/own';
+$route['dashboard/add'] = 'user/addProject';
 $route['dash-admin'] = 'admin/view/dashboard';
 
 //Project

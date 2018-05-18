@@ -1,21 +1,21 @@
 <div class="container" style="padding-top:150px">
     <div class="row">
-    <div class="col-md-4 rounded">
-        <center>
-        <div class="product-item rounded" style="height:300px; width:200px">
-            <div class="product rounded">
-                <div class="product_image">
-                    <br />
-                    <img class="rounded" src="<?php echo base_url();?>assets/img/avatar.png">
+        <div class="col-md-4 rounded">
+            <center>
+                <div class="product-item rounded" style="height:300px; width:200px">
+                    <div class="product rounded">
+                        <div class="product_image">
+                            <br />
+                            <img class="rounded" src="<?php echo base_url();?>assets/img/avatar.png">
+                        </div>
+                        <div class="product_info">
+                            <br />
+                            <button type="submit" class="btn gradient-45deg-deep-purple-purple rounded white-font">Ganti Foto profil</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="product_info">
-                    <br />
-                    <button type="submit" class="btn gradient-45deg-deep-purple-purple rounded white-font">Ganti Foto profil</button>
-                </div>
-            </div>
+            </center>
         </div>
-        </center>
-    </div>
     
     <div class="col-md-8">
         <div class="card card-body" id="login">

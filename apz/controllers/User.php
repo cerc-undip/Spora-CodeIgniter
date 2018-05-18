@@ -47,8 +47,15 @@ class User extends CI_Controller {
         }
         else if($page == 'dashboard'){
             $this->cekNotLogin();
-            $data['content'] = 'welcome_message';
-            $this->load->view('dashboard/user/main',$data);
+            if($this->input->post('now')){
+                $this->now();
+            } else if($this->input->post('own')){
+                $this->own();
+            } else if($this->input->post('addProject')){
+                $this->addProject();
+            } else {
+                $this->now();
+            }
         }
         else if($page == 'upload_project'){
             $this->cekNotLogin();
@@ -198,6 +205,22 @@ class User extends CI_Controller {
             $data['type']    = $this->session->flashdata('type');
             $this->load->view('dashboard/user/main', $data);
         }
+    }
+    
+    public function now(){
+        $data['content'] = 'dashboard/user/dashboard_now';
+        $this->load->view('dashboard/user/main', $data);
+    }
+    
+    public function own(){
+        $data['content'] = 'dashboard/user/dashboard_own';
+        $this->load->view('dashboard/user/main', $data);
+    }
+    
+    public function addProject(){
+        $data['message'] = $this->session->flashdata('msg');
+        $data['content'] = 'dashboard/user/dashboard_add';
+        $this->load->view('dashboard/user/main', $data);
     }
     
     public function shop(){
