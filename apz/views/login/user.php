@@ -46,11 +46,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <input name="login" type="submit" class="btn gradient-45deg-indigo-light-blue white-font rounded" value="Masuk">
+                            <input type="submit" name="register" id="btn" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat" value="Masuk">
                         </div>
                     </div>
                     <div style="text-align: right;">
-                        <a href="<?= base_url('register'); ?>" >Register a new membership <i class="fa fa-caret-square-o-right"></i></a>
+                        <a href="<?= base_url('register'); ?>" >Saya ingin mendaftar</a>
                     </div>
 
                 </form>
