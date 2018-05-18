@@ -29,7 +29,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Masuk sebagai user</p>
 
-    <form action="<? site_url('login') ?>" method="post">
+    <form action="<?= site_url('login') ?>" method="post">
       <div class="form-group">
         <?= $message; ?>
       </div>
