@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login.jpg); background-size:cover">
+<body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login.jpg); background-size:cover; background-repeat:no-repeat; overflow:hidden">
 <div class="login-box">
 
 <br>
@@ -40,7 +40,7 @@
       <div class="row">
 
         <div class="col-xs-4 ">
-          <button name="btnLogin" type="submit" class="btn gradient-45deg-indigo-light-blue white-font btn-block btn-flat">Sign In</button>
+          <button name="btnLogin" type="submit" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat">Sign In</button>
         </div>
 
       </div>
