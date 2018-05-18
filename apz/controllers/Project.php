@@ -9,7 +9,7 @@ class Project extends CI_Controller {
     }
 
     public function detail_proyek(){
-        $this->load->view('project/detail');
+        // nanti
     }
         
 }
