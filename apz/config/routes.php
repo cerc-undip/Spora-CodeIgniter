@@ -32,4 +32,3 @@ $route['policy'] = 'user/policy';
     
 //Logout
 $route['logout'] = 'home/logout';
-

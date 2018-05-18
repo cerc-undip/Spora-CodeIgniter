@@ -1,3 +1,14 @@
+<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/privasi.jpg); margin-top: 100px;">
+  <div class="container fill_height">
+    <div class="row align-items-center fill_height">
+      <div class="col">
+        <div class="main_slider_content">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container" style="padding-top:150px">
     <div class="row">
         <div class="col-md-8" id="register">
@@ -16,10 +27,10 @@
                 </p>
             </div>
         </div>
-        
+
         <div class="col-md-1">
         </div>
-        
+
         <div class="col-md-3">
             <div class="col-md-12">
                 <button class="dropbtn">Kebijakan Privasi</button>

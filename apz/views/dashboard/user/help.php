@@ -1,3 +1,14 @@
+<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/bantuan.jpg); margin-top: 100px;">
+  <div class="container fill_height">
+    <div class="row align-items-center fill_height">
+      <div class="col">
+        <div class="main_slider_content">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container" style="padding-top:150px">
     <div class="row">
         <div class="col-md-8" id="register">
@@ -10,7 +21,7 @@
                     4. Lakukan cek email untuk memverifikasi akun anda melalui link yang dikirim dari spora <br />
                 </p>
             </div>
-            
+
             <br />
             <div class="card card-body" id="login">
                 <h4 class="card-title">Masuk ke Akun</h4>
@@ -20,7 +31,7 @@
                     3. Jika sudah, klik button “MASUK” <br />
                 </p>
             </div>
-            
+
             <br />
             <div class="card card-body" id="profil">
                 <h4 class="card-title">Pengaturan Akun</h4>
@@ -30,15 +41,15 @@
                     3. Simpan jika sudah selesai dengan klik button “SIMPAN”. <br />
                 </p>
             </div>
-            
+
             <br />
             <div class="card card-body" id="logout">
                 <h4 class="card-title">Keluar</h4>
                 <p class="card-text">
-                   Untuk keluar akun anda cukup klik button “KELUAR” pada menu akun anda di bagian ... 
+                   Untuk keluar akun anda cukup klik button “KELUAR” pada menu akun anda di bagian ...
                 </p>
             </div>
-            
+
             <br />
             <div class="card card-body" id="publisher">
                 <h4 class="card-title">Menjadi Publisher di <b>SPORA</b></h4>
@@ -50,7 +61,7 @@
                     4. Klik button tambah proyek dan isikan keterangan serta detail proyek yang akan di-publish <br />
                 </p>
             </div>
-            
+
             <br />
             <div class="card card-body" id="trainer">
                 <h4 class="card-title">Menjadi Trainer di <b>SPORA</b></h4>
@@ -62,7 +73,7 @@
                     4. Akses kembali portal proyek dan pilih proyek yang akan anda jalankan <br />
                 </p>
             </div>
-            
+
             <br />
             <div class="card card-body" id="buyer">
                 <h4 class="card-title">Sebagai Buyer di <b>SPORA</b></h4>
@@ -80,7 +91,7 @@
         </div>
         <div class="col-md-1">
         </div>
-        
+
         <div class="col-md-3">
             <div class="col-md-12">
                 <button onclick="myFunction()" class="dropbtn">Panduan Umum</button>
