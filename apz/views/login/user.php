@@ -46,7 +46,7 @@
       </div>
     </form>
       </br>
-    <a href="register.html" class="text-center">Register a new membership</a>
+    <a href="<?php echo base_url('register'); ?>" class="text-center">Register a new membership</a>
 
   </div>
 

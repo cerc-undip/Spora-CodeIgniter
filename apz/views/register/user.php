@@ -9,17 +9,19 @@
   <link rel="stylesheet" href="<?= base_url() ?>assets/component/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/component/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css">
+
   <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/iCheck/square/blue.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition register-page">
-<div class="register-box">
-  <div class="register-logo">
-    Welcome to 
-      </br><b>SPORA</b>
-  </div>
-
-  <div class="register-box-body">
+<body class="hold-transition register-page " style="background:url(<?php echo base_url();?>assets/img/login-01.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden">
+  <div class="register-box">
+    <center>
+      <img src="<?php echo base_url();?>assets/img/logo.png" style="">
+    </center>
+    <br>
+    <br>
+    <div class="register-box-body">
     <p class="login-box-msg">Register a new membership</p>
 
     <form action="<?= site_url('register') ?>" method="post">
@@ -41,8 +43,8 @@
       </div>
       <div class="row">
         <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+        <div class="col-xs-4 ">
+          <button name="btnRegister" type="submit" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
@@ -51,7 +53,7 @@
       </br>
     <a href="<?= site_url('login') ?>" class="text-center">Sudah menjadi pengguna</a>
   </div>
-    
+
 </div>
 
 <script src="<?= base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>
