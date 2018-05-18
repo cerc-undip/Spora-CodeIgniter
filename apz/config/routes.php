@@ -17,7 +17,13 @@ $route['register'] = 'user/view/register';
 
 //Dashboard
 $route['dashboard'] = 'user/view/dashboard';
+$route['help'] = 'user/help';
+$route['term'] = 'user/term';
+$route['policy'] = 'user/policy';
 $route['dash-admin'] = 'admin/view/dashboard';
 
-// Proyek
 $route['proyek'] = 'project';
+
+//Logout
+$route['logout'] = 'home/logout';
+

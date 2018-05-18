@@ -79,4 +79,19 @@ class User extends CI_Controller {
 
         redirect(site_url('register'));
     }
+    
+    public function help(){
+        $data['content'] = 'dashboard/user/help';
+        $this->load->view('dashboard/user/main', $data);
+    }
+    
+    public function term(){
+        $data['content'] = 'dashboard/user/term';
+        $this->load->view('dashboard/user/main', $data);
+    }
+    
+    public function policy(){
+        $data['content'] = 'dashboard/user/policy';
+        $this->load->view('dashboard/user/main', $data);
+    }
 }
