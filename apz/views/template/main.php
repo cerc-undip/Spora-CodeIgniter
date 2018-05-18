@@ -27,9 +27,9 @@
             </div>
             <nav class="navbar">
               <ul class="navbar_menu">
-                <li><a href="#">Beranda</a></li>
+                <li><a href="<?php echo base_url('dashboard'); ?>">Beranda</a></li>
                 <li><a href="#">Toko</a></li>
-                <li><a href="#">Relawan</a></li>
+                <li><a href="<?php echo base_url('proyek'); ?>">Relawan</a></li>
                 <li><a href="contact.html">Tentang</a></li>
                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                 <li class="account">
@@ -42,7 +42,7 @@
                       <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out"></i>Keluar</a></li>
 
                     <?php } else { ?>
-                    
+
                       <li><a href="<?= site_url('login'); ?>"><i class="fa fa-user-circle"></i>Masuk</a></li>
                       <li><a href="<?= site_url('register'); ?>"><i class="fa fa-sign-out"></i>Daftar</a></li>
 
@@ -70,7 +70,7 @@
         <li class="menu_item has-children"><a href="#">Akun Saya<i class="fa fa-angle-down"></i></a>
           <ul class="menu_selection">
             <?php if($this->session->userdata('login')){ ?>
-              
+
               <li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i>Profil</a></li>
               <li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard</a></li>
               <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Keluar</a></li>
@@ -84,7 +84,7 @@
 
           </ul>
         </li>
-        <li><a href="#">Beranda</a></li>
+        <li><a href="<?php echo base_url('dashboard');?>">Beranda</a></li>
         <li><a href="#">Toko</a></li>
         <li><a href="#">Relawan</a></li>
         <li><a href="#">Tentang</a></li>
@@ -94,7 +94,7 @@
 
   <!-- Slider -->
 
-  <div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel1.jpg); margin-top: 50px;">
+  <div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel<?php echo(rand(1,3));  ?>.jpg); margin-top: 50px;">
     <div class="container fill_height">
       <div class="row align-items-center fill_height">
         <div class="col">
