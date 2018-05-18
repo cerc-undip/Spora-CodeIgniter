@@ -28,6 +28,11 @@ class User_model extends CI_Model {
     return $q->row();
   }
 
+  public function getVolunteerConfirm(){
+    $q = $this->db->get_where('volunteer', ['id_akun' => $this->session->userdata('id_akun')]);
+    return $q->row()->confirmed;
+  }
+
   public function addUser($datas){
     $data = array(
       'email'    => $datas['email'],

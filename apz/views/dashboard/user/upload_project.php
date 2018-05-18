@@ -8,7 +8,10 @@
 
 <h1>Upload Proyek</h1>
 
+
 <form action="" method="post" enctype="multipart/form-data">
+  <?= $message; ?>
+
   <label>Nama Proyek</label>
   <input type="text" name="nama" required><br>
 

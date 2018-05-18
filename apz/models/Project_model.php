@@ -13,7 +13,7 @@ class Project_model extends CI_Model {
     return $q;
   }
 
-  public function addProject(){
+  public function addProject($alamatFoto){
     $slug = explode(" ", $this->input->post('nama'));
     // hanya sampai 10 index
     $slug = strtolower(implode("-", array_slice($slug, 0, 10)));
@@ -24,7 +24,7 @@ class Project_model extends CI_Model {
       'tempat' => $this->input->post('tempat'),
       'desk' => $this->input->post('desk'),
       'slug' => $slug,
-      'foto_utama' => 'awaw.jpg'
+      'foto_utama' => $alamatFoto
     );
 
     $this->db->insert('proyek', $data);

@@ -17,51 +17,84 @@ class User extends CI_Controller {
             redirect(site_url('login'));
     }
 
+    private function generateAlamat(){
+        $alamat = "";
+        $n = "1234567890qwertyuiopasdfghjklzxcvbnm";
+        for($i=0;$i<12;$i++){
+          $alamat .= $n[rand(0, strlen($n) - 1)];
+        }
+        return 'prj_'.$alamat;
+    }
+
     public function view($page){
-      if($page == 'login'){
-        $this->cekLogin();
-        if($this->input->post('login')){
-          $this->actionLogin();
-        } else {
-          $data['message'] = $this->session->flashdata('msg');
-          $this->load->view('login/user', $data);
+        if($page == 'login'){
+            $this->cekLogin();
+            
+            if($this->input->post('login')){
+              $this->actionLogin();
+            } else {
+              $data['message'] = $this->session->flashdata('msg');
+              $this->load->view('login/user', $data);
+            }
+        } else if($page == 'register'){
+            $this->cekLogin();
+            if($this->input->post('register')){
+              $this->actionRegister();
+            } else {
+              $data['message'] = $this->session->flashdata('msg');
+              $this->load->view('register/user', $data);
+            }
         }
-      } else if($page == 'register'){
-        $this->cekLogin();
-        if($this->input->post('register')){
-          $this->actionRegister();
-        } else {
-          $data['message'] = $this->session->flashdata('msg');
-          $this->load->view('register/user', $data);
+        else if($page == 'dashboard'){
+            $this->cekNotLogin();
+            $data['content'] = 'welcome_message';
+            $this->load->view('dashboard/user/main',$data);
         }
-      }
-      else if($page == 'dashboard'){
-        $this->cekNotLogin();
-        $data['content'] = 'welcome_message';
-        $this->load->view('dashboard/user/main',$data);
-      }
-      else if($page == 'upload_proyek'){
-        $this->cekNotLogin();
-        if($this->input->post('upload')){
-          $this->actionUploadProyek();
-        } else {
-          $data['message'] = $this->session->flashdata('msg');
-          $this->load->view('dashboard/user/upload_proyek');
+        else if($page == 'upload_proyek'){
+            $this->cekNotLogin();
+            if($this->input->post('upload')){
+              $this->actionUploadProyek();
+            } else {
+              $data['message'] = $this->session->flashdata('msg');
+              $this->load->view('dashboard/user/upload_proyek', $data);
+            }
         }
-      } else if($page == 'daftar_volunteer'){
-        $this->cekNotLogin();
-        $cek = $this->user_model->checkVolunteer();
-        if($this->input->post('daftar')){
-          if($cek->num_rows() > 0){
-            redirect(site_url('dashboard'));
-          } else {
-            $this->actionDaftarVol();
-          }
-        } else {
-          $data['message'] = $this->session->flashdata('msg');
-          $this->load->view('dashboard/user/daftar_volunteer', $data);
+        else if($page == 'upload_proyek'){
+            $this->cekNotLogin();
+            $confirmed = $this->user_model->getVolunteerConfirm();
+
+            if($confirmed == 1){
+                if($this->input->post('upload')){
+                    $this->actionUploadProyek();
+                }
+                else {
+                    $data['message'] = $this->session->flashdata('msg');
+                    $this->load->view('dashboard/user/upload_proyek', $data);
+                }
+            }
+            else {
+                echo "Akun anda belum terkonfirmasi menjadi volunteer. Harap tunggu hingga Admin mengkonfirmasi, Terima kasih";
+            }
+
         }
-      }
+        else if($page == 'daftar_volunteer'){
+            $this->cekNotLogin();
+
+            $cek = $this->user_model->checkVolunteer();
+
+            if($this->input->post('daftar')){
+                if($cek->num_rows() > 0){
+                    redirect(site_url('dashboard'));
+                }
+                else {
+                    $this->actionDaftarVol();
+                }
+            }
+            else {
+                $data['message'] = $this->session->flashdata('msg');
+                $this->load->view('dashboard/user/daftar_volunteer', $data);
+            }
+        }
     }
 
     private function actionLogin(){
@@ -101,9 +134,26 @@ class User extends CI_Controller {
     }
 
     private function actionUploadProyek(){
-        $this->load->model('project_model');
-        $this->project_model->addProject();
-        echo "Berhasil";
+        $config['upload_path']   = APPPATH.'../uploads/projects/';
+        $config['file_name']     = $this->generateAlamat();
+        $config['allowed_types'] = 'jpg|png';
+        $config['max_size']      = 500;
+
+        $this->load->library('upload', $config);
+        
+        if ( ! $this->upload->do_upload('foto')){
+            $message = '<h4>'. $this->upload->display_errors() .'</h4>';
+            $this->session->set_flashdata('msg', $message);
+        }
+        else{
+            $this->load->model('project_model');
+            $data = $this->upload->data();
+            $this->project_model->addProject($data['file_name']);
+            $message = '<p>Proyek berhasil diupload. Kami akan memberitahukan kepada Anda setiap ada perkembangan.</p>';
+            $this->session->set_flashdata('msg', $message);
+        }
+
+        redirect(site_url('dashboard/upload-proyek'));
     }
 
     private function actionDaftarVol(){
