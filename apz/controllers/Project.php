@@ -12,7 +12,6 @@ class Project extends CI_Controller {
     {
       $data['view_name'] = 'detailProject';
       $this->load->view('template/main',$data);
-
     }
 
 

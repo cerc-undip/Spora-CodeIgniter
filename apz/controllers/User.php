@@ -29,7 +29,7 @@ class User extends CI_Controller {
     public function view($page){
         if($page == 'login'){
             $this->cekLogin();
-            
+
             if($this->input->post('login')){
               $this->actionLogin();
             } else {
@@ -138,7 +138,7 @@ class User extends CI_Controller {
         $config['max_size']      = 500;
 
         $this->load->library('upload', $config);
-        
+
         if ( ! $this->upload->do_upload('foto')){
             $message = '<h4>'. $this->upload->display_errors() .'</h4>';
             $this->session->set_flashdata('msg', $message);
@@ -206,6 +206,7 @@ class User extends CI_Controller {
             $this->load->view('dashboard/user/main', $data);
         }
     }
+<<<<<<< Updated upstream
     
     public function now(){
         $data['content'] = 'dashboard/user/dashboard_now';
@@ -223,11 +224,14 @@ class User extends CI_Controller {
         $this->load->view('dashboard/user/main', $data);
     }
     
+=======
+
+>>>>>>> Stashed changes
     public function shop(){
         $data['content'] = 'dashboard/user/shop';
         $this->load->view('dashboard/user/main', $data);
     }
-    
+
     public function help(){
         $data['content'] = 'dashboard/user/help';
         $this->load->view('dashboard/user/main', $data);
