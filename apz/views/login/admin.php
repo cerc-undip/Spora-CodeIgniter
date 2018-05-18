@@ -39,7 +39,7 @@
       </div>
     </form>
       </br>
-    <a href="<?= site_url('login/user') ?>" class="text-center">Login user</a>
+    <a href="<?= site_url('login') ?>" class="text-center">Login user</a>
 
   </div>
     

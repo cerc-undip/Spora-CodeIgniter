@@ -10,6 +10,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['temp'] = 'welcome/temp';
 
 //Login
-$route['login/user'] = 'login/view/user';
-$route['login'] = 'login/actionLogin';
-$route['sudo'] = 'login/view/sudo';
+$route['login'] = 'user/view';
+$route['sudo'] = 'admin/view';
+
+//register
+$route['register'] = '';

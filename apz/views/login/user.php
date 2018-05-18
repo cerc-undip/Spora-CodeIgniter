@@ -42,15 +42,11 @@
     </form>
       </br>
     <a href="register.html" class="text-center">Register a new membership</a>
-
   </div>
-    
 </div>
     
 <script src="<?php echo base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url() ?>assets/component/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
 <script src="<?php echo base_url() ?>assets/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
