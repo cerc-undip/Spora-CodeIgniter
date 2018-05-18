@@ -12,14 +12,18 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/iCheck/square/blue.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-    
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-      Welcome to 
-      </br><b>SPORA</b>
-  </div>
 
+<body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login.jpg); background-size:cover">
+<div class="login-box">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   <div class="login-box-body">
     <p class="login-box-msg">Masuk sebagai user</p>
 
@@ -33,20 +37,24 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-          
+
         <div class="col-xs-4">
           <button name="btnLogin" type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
-          
+
       </div>
     </form>
       </br>
-    <a href="<?= site_url('register') ?>" class="text-center">Register a new membership</a>
+    <a href="register.html" class="text-center">Register a new membership</a>
+
   </div>
+
 </div>
-    
+
 <script src="<?php echo base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url() ?>assets/component/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
 <script src="<?php echo base_url() ?>assets/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
