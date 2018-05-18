@@ -1,106 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login User</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/component/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/component/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/component/Ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/iCheck/square/blue.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login User</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/bootstrap4/bootstrap.min.css">
+        <link href="<?= base_url() ?>assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/animate.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/main_styles.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    </head>
+    
+    <body class="hold-transition login-page" style="background:url(<?= base_url();?>assets/img/login-01.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden; size:100%">
+        <div class="container" style="padding-top:10%">
+            <center>
+                <a href="<?= site_url(); ?>">
+                    <img src="<?= base_url();?>assets/img/logo.png" style="">
+                </a>
+            </center>
+            <br />
+            <center>
+            <div class="card card-body" id="login" style="width:40%">
+                <h5 class="card-title">Hi, <b>Orang Baik</b> ! :)))</h5>
+                <h5 class="card-title">Teruskan kebaikanmu disini!</h5>
+                <form class="form-horizontal" action="<?= site_url('login') ?>" method="post">
+                    <div class="form-group">
+                        <?= $message; ?>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <input type="email" name="email" class="form-control" placeholder="email">
+                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <input type="password" name="password" class="form-control" placeholder="password">
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <input name="login" type="submit" class="btn gradient-45deg-indigo-light-blue white-font rounded" value="Masuk">
+                        </div>
+                    </div>
+                    <div style="text-align: right;">
+                        <a href="<?= base_url('register'); ?>" >Register a new membership <i class="fa fa-caret-square-o-right"></i></a>
+                    </div>
 
-<body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login-01.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden">
-<div class="login-box">
-  <center>
-    <a href="<?= site_url(); ?>">
-      <img src="<?php echo base_url();?>assets/img/logo.png" style="">
-    </a>
-  </center>
-
-  <br>
-  <br>
-  <br>
-
-  <div class="login-box-body">
-    <p class="login-box-msg">Masuk sebagai user</p>
-
-    <form action="<?= site_url('login') ?>" method="post">
-      <div class="form-group">
-        <?= $message; ?>
-      </div>
-
-      <div class="form-group has-feedback">
-        <input name="email" type="email" class="form-control" placeholder="Email" required>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      
-      <div class="form-group has-feedback">
-        <input name="password" type="password" class="form-control" placeholder="Password" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      
-      <div class="row">
-        <div class="col-xs-4 ">
-          <input type="submit" name="login" class="btn gradient-45deg-indigo-light-blue shadow white-font rounded btn-block btn-flat" value="Masuk">
+                </form>
+            </div>
+            </center>
         </div>
-      </div>
-    </form>
-      
-<!--
-      <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="inputName" class="col-sm-12 control-label">Name</label>
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail" class="col-sm-12 control-label">Email</label>
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputName" class="col-sm-12 control-label">Name</label>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputExperience" class="col-sm-12 control-label">Pengalaman</label>
-                    <div class="col-md-12">
-                        <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-12">
-                        <button type="submit" class="btn btn-danger">Submit</button>
-                    </div>
-                </div>
-            </form>
--->
 
-    </br>
-    <a href="<?php echo base_url('register'); ?>" class="text-center">Register a new membership</a>
-  </div>
-</div>
-
-<script src="<?php echo base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url() ?>assets/component/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="<?php echo base_url() ?>assets/plugins/iCheck/icheck.min.js"></script>
-
-</body>
+        <script src="<?php echo base_url() ?>assets/component/jquery/dist/jquery.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/component/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/plugins/iCheck/icheck.min.js"></script>
+    </body>
 </html>
