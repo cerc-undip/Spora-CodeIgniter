@@ -30,10 +30,9 @@ $route['profile'] = 'user/profile';
 $route['help'] = 'user/help';
 $route['term'] = 'user/term';
 $route['policy'] = 'user/policy';
-    
+
 //Logout
 $route['logout'] = 'home/logout';
-
 
 
 //Fungsi dulu, desain belakangan
