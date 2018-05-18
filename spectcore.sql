@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 18 Mei 2018 pada 05.13
+-- Generation Time: 18 Mei 2018 pada 08.18
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -33,6 +33,13 @@ CREATE TABLE `admin` (
   `nama` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `nama`) VALUES
+(1, 'spectcore', '$2y$10$MrkIiDOdnmBH17KL.Usm.eNhKwKOo1a3iqOGXigbGobof7VFLyXA2', 'Spectcore Admin');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +52,14 @@ CREATE TABLE `akun` (
   `password` varchar(255) NOT NULL,
   `nama` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `akun`
+--
+
+INSERT INTO `akun` (`id`, `email`, `password`, `nama`) VALUES
+(1, 'me@spectcore.com', '$2y$10$MrkIiDOdnmBH17KL.Usm.eNhKwKOo1a3iqOGXigbGobof7VFLyXA2', 'Spectcore'),
+(2, 'fnyhsbi@gmail.com', '$2y$10$zfH34edGRAULlwa8brz6neOsCCCUE/31UDLd/lQYEbns..HBTb8Gu', 'Fanny Hasbi');
 
 -- --------------------------------------------------------
 
@@ -156,9 +171,9 @@ CREATE TABLE `restok_produk` (
 CREATE TABLE `user` (
   `id` int(4) NOT NULL,
   `id_akun` int(4) NOT NULL,
-  `prov` varchar(50) NOT NULL,
-  `kab` varchar(50) NOT NULL,
-  `kec` varchar(50) NOT NULL,
+  `prov` varchar(50) DEFAULT NULL,
+  `kab` varchar(50) DEFAULT NULL,
+  `kec` varchar(50) DEFAULT NULL,
   `jalan` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -259,7 +274,8 @@ ALTER TABLE `user`
 -- Indexes for table `volunteer`
 --
 ALTER TABLE `volunteer`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_akun` (`id_akun`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -269,12 +285,12 @@ ALTER TABLE `volunteer`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ambil_proyek`
 --
@@ -358,6 +374,12 @@ ALTER TABLE `restok_produk`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_akun`) REFERENCES `akun` (`id`);
+
+--
+-- Ketidakleluasaan untuk tabel `volunteer`
+--
+ALTER TABLE `volunteer`
+  ADD CONSTRAINT `volunteer_ibfk_1` FOREIGN KEY (`id_akun`) REFERENCES `akun` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
