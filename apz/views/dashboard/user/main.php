@@ -41,7 +41,13 @@
                 </li>
                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 								<li class="account">
-                  <a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
+                  <a href="#"><i class="fa fa-user" style="min-width:30px"></i>
+                    <?php if($this->session->userdata('nama')){
+                      echo explode(" ", $this->session->userdata('nama'))[0];
+                    } else { ?>
+                      &nbsp; Akun
+                    <?php } ?>
+                  </a>
                   <ul class="account_selection" style="width:200px">
                     <?php if($this->session->userdata('login')){ ?>
                       <li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle"></i>Profil</a></li>
