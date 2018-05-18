@@ -17,9 +17,9 @@
                     <br />
                     <form class="form-horizontal" action="<?= site_url('dashboard') ?>" method="post">
                         <div class="form-group">
-                            <input type="submit" name="now" class="btn gradient-45deg-indigo-light-blue white-font btn-block btn-flat" value="Proyek yang diikuti">
-                            <input type="submit" name="own" class="btn gradient-45deg-indigo-light-blue white-font btn-block btn-flat" value="Proyek milik sendiri">
-                            <input type="submit" name="addProject" class="btn gradient-45deg-deep-purple-purple white-font btn-block btn-flat" value="Tambah proyek">
+                            <a href="<?= site_url('dashboard/now') ?>" class="btn gradient-45deg-indigo-light-blue white-font btn-block btn-flat" >Proyek yang diikuti</a>
+                            <a href="<?= site_url('dashboard/own') ?>" class="btn gradient-45deg-indigo-light-blue white-font btn-block btn-flat" >Proyek milik sendiri</a>
+                            <a href="<?= site_url('dashboard/add') ?>" class="btn gradient-45deg-deep-purple-purple white-font btn-block btn-flat" >Tambah proyek</a>
                         </div>
                     </form>
                 </div>
