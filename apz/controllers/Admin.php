@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-    public function view(){
+    public function view($page){
         $this->load->view('login/admin');
     }
     
