@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/categories_styles.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/categories_responsive.css">
+  <script src="<?php echo base_url(); ?>assets/js/coloshop/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 	<div class="super_container">
@@ -197,7 +198,6 @@
 
 </div>
 
-<script src="<?php echo base_url(); ?>assets/js/coloshop/jquery-3.2.1.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/css/coloshop/bootstrap4/popper.js"></script>
 <script src="<?php echo base_url(); ?>assets/css/coloshop/bootstrap4/bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/Isotope/isotope.pkgd.min.js"></script>
@@ -205,6 +205,7 @@
 <script src="<?php echo base_url(); ?>assets/plugins/easing/easing.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/coloshop/custom.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/coloshop/categories_custom.js"></script>
 </body>
 

@@ -66,4 +66,14 @@ class User_model extends CI_Model {
 
     $this->db->update('akun', $data);
   }
+
+  public function updateUserPass(){
+    $this->db->where('email', $this->session->userdata('email'));
+
+    $data = array(
+      'password' => $this->input->post('password')
+    );
+
+    $this->db->update('akun', $data);
+  }
 }

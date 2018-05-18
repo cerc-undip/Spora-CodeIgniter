@@ -22,6 +22,10 @@
             <h4 class="card-title">&nbsp;Ubah Profil</h4>
             <form class="form-horizontal" action="" method="post">
                 <div class="form-group">
+                    <div id="profile-error-message" class="col-sm-12">
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-sm-12">
                         <input type="email" class="form-control" name="email" placeholder="Email" value="<?= $this->session->userdata('email'); ?>" readonly>
                     </div>
@@ -44,6 +48,11 @@
 
             <h4 class="card-title">&nbsp;Ubah Password</h4>
             <form class="form-horizontal" action="" method="post">
+                <div class="form-group">
+                    <div id="pass-error-message" class="col-sm-12">
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-sm-12">
                         <input type="password" id="old-password" class="form-control" placeholder="Password lama" required>
@@ -79,18 +88,25 @@ $(function () {
     var password2 = $("#password2").val();
 
     if(password.length < 6){
-      $("#error-message").empty();
-      $("#error-message").append("<div class=\"alert alert-danger\">Password minimal 6 karakter alfanumerik.</div>")
+      $("#pass-error-message").empty();
+      $("#pass-error-message").append("<div class=\"alert alert-danger\">Password minimal 6 karakter alfanumerik.</div>")
       return false;
     }
 
     if (password != password2) {
-      $("#error-message").empty();
-      $("#error-message").append("<div class=\"alert alert-danger\">Password tidak cocok.</div>")
+      $("#pass-error-message").empty();
+      $("#pass-error-message").append("<div class=\"alert alert-danger\">Password tidak cocok.</div>")
       return false;
     }
 
     return true;
   });
+
+    <?php if($message){ ?>
+
+    swal("", "<?= $message; ?>", "<?= $type; ?>");
+
+    <?php } ?>
 });
+
 </script>
