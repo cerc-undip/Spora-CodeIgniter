@@ -178,6 +178,7 @@ class User extends CI_Controller {
         }
         else if($this->input->post('ubah_pass')){
             $user = $this->user_model->getUser($this->session->userdata('email'));
+<<<<<<< Updated upstream
 
             if(password_verify($this->input->post('old-password'), $user->password)){
                 if($this->input->post('password') == $this->input->post('password2')){
@@ -197,6 +198,27 @@ class User extends CI_Controller {
                 $this->session->set_flashdata('msg', 'Password salah.');
             }
 
+=======
+
+            if(password_verify($this->input->post('old-password'), $user->password)){
+                if($this->input->post('password') == $this->input->post('password2')){
+                    $this->user_model->updatePass();
+                    $this->session->set_flashdata('type', 'success');
+                    $this->session->set_flashdata('msg', 'Password berhasil diganti.');
+                }
+                else {
+                    // password tidak sama
+                    $this->session->set_flashdata('type', 'warning');
+                    $this->session->set_flashdata('msg', 'Password tidak cocok.');
+                }
+            }
+            else {
+                // Password lama salah
+                $this->session->set_flashdata('type', 'warning');
+                $this->session->set_flashdata('msg', 'Password salah.');
+            }
+
+>>>>>>> Stashed changes
             redirect(site_url('profile'));
         }
         else {
