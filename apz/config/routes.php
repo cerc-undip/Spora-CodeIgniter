@@ -6,9 +6,10 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//LOGIN
-$route['login/(:any)'] = 'login/view/$1';
-$route['login/login'] = 'login/login';
-
-
+//Landing
 $route['temp'] = 'welcome/temp';
+
+//Login
+$route['login/user'] = 'login/view/user';
+$route['login'] = 'login/actionLogin';
+$route['sudo'] = 'login/view/sudo';
