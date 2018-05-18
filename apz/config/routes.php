@@ -33,11 +33,10 @@ $route['shop'] = 'user/shop';
 $route['help'] = 'user/help';
 $route['term'] = 'user/term';
 $route['policy'] = 'user/policy';
-    
+
 //Logout
 $route['logout'] = 'home/logout';
 
 //Fungsi dulu, desain belakangan
-
 $route['dashboard/daftar-volunteer'] = 'user/view/daftar_volunteer';
 $route['dashboard/upload-project'] = 'user/view/upload_project';
