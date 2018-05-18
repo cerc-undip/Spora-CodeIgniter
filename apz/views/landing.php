@@ -28,17 +28,17 @@
 						<nav class="navbar">
 							<ul class="navbar_menu">
 								<li><a href="#">Beranda</a></li>
-								<li><a href="#">Spora Market</a></li>
-								<li><a href="#">Spora Phyte</a></li>
+								<li><a href="#">Toko</a></li>
+								<li><a href="#">Relawan</a></li>
 								<li><a href="contact.html">Tentang</a></li>
-                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                <li class="account">
-                                    <a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
-                                    <ul class="account_selection">
-										<li><a href="#"><i class="fa fa fa-sign-in"></i>Masuk</a></li>
-										<li><a href="#"><i class="fa fa-plus-circle"></i>Daftar</a></li>
+								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+								<li class="account">
+									<a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
+									<ul class="account_selection">
+										<li><a href="#"><i class="fa fa-user-circle"></i>Profil</a></li>
+										<li><a href="#"><i class="fa fa-sign-out"></i>Keluar</a></li>
 									</ul>
-                                </li>
+								</li>
 							</ul>
 							<div class="hamburger_container">
 								<i class="fa fa-bars" aria-hidden="true"></i>
@@ -56,15 +56,15 @@
 		<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="hamburger_menu_content text-right">
 			<ul class="menu_top_nav">
-				<li class="menu_item has-children"><a href="#">My Account<i class="fa fa-angle-down"></i></a>
+				<li class="menu_item has-children"><a href="#">Akun Saya<i class="fa fa-angle-down"></i></a>
 					<ul class="menu_selection">
-						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Masuk</a></li>
+						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Daftar</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Beranda</a></li>
-				<li><a href="#">Spora Market</a></li>
-				<li><a href="#">Spora Phyte</a></li>
+				<li><a href="#">Toko</a></li>
+				<li><a href="#">Relawan</a></li>
 				<li><a href="#">Tentang</a></li>
 			</ul>
 		</div>
@@ -652,7 +652,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="footer_nav_container">
-						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd. This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a></div>
+						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd.</div>
 					</div>
 				</div>
 			</div>
