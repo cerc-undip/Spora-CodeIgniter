@@ -21,3 +21,5 @@ $route['dash-admin'] = 'admin/view/dashboard';
 
 // Proyek
 $route['proyek'] = 'project';
+$route['proyek/(:num)/(:any)'] = 'project/detail_proyek/$1/$2';
+$route['proyek/detail'] = 'project/detail_proyek';

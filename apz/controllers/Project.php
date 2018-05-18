@@ -7,5 +7,9 @@ class Project extends CI_Controller {
         $data['view_name'] = 'main';
         $this->load->view('template/main', $data);
     }
+
+    public function detail_proyek(){
+        $this->load->view('project/detail');
+    }
         
 }
