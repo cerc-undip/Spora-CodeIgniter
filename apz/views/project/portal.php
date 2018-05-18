@@ -1,3 +1,15 @@
+<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/carousel<?php echo(rand(1,3));  ?>.jpg); margin-top: 100px;">
+    <div class="container fill_height">
+      <div class="row align-items-center fill_height">
+        <div class="col">
+          <div class="main_slider_content">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div class="blogs">
   <div class="container">
     <div class="row">

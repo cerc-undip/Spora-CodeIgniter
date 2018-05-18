@@ -33,7 +33,7 @@
                             <ul class="navbar_menu">
                                 <li><a href="<?= site_url(''); ?>">Beranda</a></li>
 								<li><a href="<?= site_url('shop'); ?>">Toko</a></li>
-								<li><a href="<?= site_url('proyek'); ?>">Relawan</a></li>
+								<li><a href="<?= site_url('project'); ?>">Relawan</a></li>
                                 <li class="account">
                                     <a href="#">Tentang</a>
                                     <ul class="account_selection" style="width:200px">
