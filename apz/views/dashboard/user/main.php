@@ -102,15 +102,37 @@
 	</div>
 
     <?php $this->load->view($content) ?>
+        
+    <div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+                    <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+				        <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Kontak</button>
+				    </div>  
+				</div>
+				<div class="col-lg-4">
+                    <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+				        <h5>cs@spora.com</h5>
+				    </div>  
+				</div>
+                <div class="col-lg-4">
+                    <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+				        <h5>+0295 180 518</h5>
+				    </div>  
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<footer class="footer">
 		<div class="container">
+            <br />
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
-						<ul class="footer_nav">
-							<li><a href="contact.html">Contact us</a></li>
-						</ul>
+				<div class="col-lg-12">
+					<div class="footer_nav_container">
+						<div class="cr">© <?php echo date('Y'); ?> All Rights Reserverd. SPECTCORE</div>
 					</div>
 				</div>
 			</div>
