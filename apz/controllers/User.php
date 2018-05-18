@@ -8,6 +8,8 @@ class User extends CI_Controller {
             $this->load->view('login/user');
         } else if($page=='register'){
             $this->load->view('register/user');
+        } else if($page=='dashboard'){
+            $this->load->view('dashboard/user/main');
         }
     }
     
