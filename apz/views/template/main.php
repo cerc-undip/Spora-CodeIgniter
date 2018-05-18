@@ -11,9 +11,12 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/single_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/single_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/main_styles.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/custom.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/coloshop/responsive.css">
+
 </head>
 <body>
   <div class="super_container">
@@ -162,6 +165,8 @@
 <script src="<?php echo base_url(); ?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/easing/easing.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/coloshop/custom.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/coloshop/single_custom.js"></script>
+
 </body>
 
 </html>

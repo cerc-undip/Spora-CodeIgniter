@@ -1,29 +1,18 @@
-<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/persyaratan.jpg); margin-top: 100px;">
-  <div class="container fill_height">
-    <div class="row align-items-center fill_height">
-      <div class="col">
-        <div class="main_slider_content">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="container" style="padding-top:150px">
     <div class="row">
         <div class="col-md-8" id="standard">
-            <div class="card card-body">
-                <h4 class="card-title">Umum</h4>
-                <p class="card-text" style="text-align: justify;">
-                    Spora merupakan Situs E-Commerce yang mengangkat masyarakat pra-sejahtera agar memiliki produk dengan nilai jual. Situs spora ini dikelola oleh manajemen spora.Dengan mengakses dan menggunakan situs spora anda dinyatakan telah memahami dan menyepakati semua isi dalam ketentuan-ketentuan pada situs ini.
-
+          <div class="card card-body">
+            <img src="<?php echo base_url() ?>assets/img/persyaratan.jpg" alt="">
+          </div>
+          <br>
+          <div class="card card-body">
+            <h4 class="card-title">Umum</h4>
+            <p class="card-text" style="text-align: justify;">
+              Spora merupakan Situs E-Commerce yang mengangkat masyarakat pra-sejahtera agar memiliki produk dengan nilai jual. Situs spora ini dikelola oleh manajemen spora.Dengan mengakses dan menggunakan situs spora anda dinyatakan telah memahami dan menyepakati semua isi dalam ketentuan-ketentuan pada situs ini.
             </div>
-
-            <br />
+            <br/>
             <div class="card card-body" id="volunteer">
-                <h4 class="card-title">Bagi Volunteer</h4>
-                <p class="card-text">
-                </p>
+              <h4 class="card-title">Bagi Volunteer</h4>
             </div>
 
             <br />

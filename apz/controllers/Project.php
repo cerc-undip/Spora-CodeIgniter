@@ -8,8 +8,12 @@ class Project extends CI_Controller {
         $this->load->view('template/main', $data);
     }
 
-    public function detail_proyek(){
-        // nanti
+    public function detailProyek($id)
+    {
+      $data['view_name'] = 'detailProyek';
+      $this->load->view('template/main',$data);
+
     }
-        
+
+
 }

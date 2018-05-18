@@ -1,17 +1,10 @@
-<div class="main_slider" style="background-image:url(<?php echo base_url(); ?>assets/img/bantuan.jpg); margin-top: 100px;">
-  <div class="container fill_height">
-    <div class="row align-items-center fill_height">
-      <div class="col">
-        <div class="main_slider_content">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="container" style="padding-top:150px">
     <div class="row">
         <div class="col-md-8" id="register">
+            <div class="card card-body">
+              <img src="<?php echo base_url() ?>assets/img/bantuan.jpg" alt="">
+            </div>
+            <br>
             <div class="card card-body">
                 <h4 class="card-title">Daftar Akun Baru</h4>
                 <p class="card-text">
@@ -21,7 +14,6 @@
                     4. Lakukan cek email untuk memverifikasi akun anda melalui link yang dikirim dari spora <br />
                 </p>
             </div>
-
             <br />
             <div class="card card-body" id="login">
                 <h4 class="card-title">Masuk ke Akun</h4>
