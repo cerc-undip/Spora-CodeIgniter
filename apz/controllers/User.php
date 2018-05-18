@@ -12,9 +12,13 @@ class User extends CI_Controller {
         if($this->session->userdata('login'))
             redirect(site_url());
     }
+    private function cekNotLogin(){
+        if(!$this->session->userdata('login'))
+            redirect(site_url('login'));
+    }
 
     public function view($page){
-        if($page=='login'){
+        if($page == 'login'){
             $this->cekLogin();
 
             if($this->input->post('login')){
@@ -25,7 +29,7 @@ class User extends CI_Controller {
                 $this->load->view('login/user', $data);
             }
         }
-        else if($page=='register'){
+        else if($page == 'register'){
             $this->cekLogin();
             
             if($this->input->post('register')){
@@ -35,10 +39,20 @@ class User extends CI_Controller {
                 $data['message'] = $this->session->flashdata('msg');
                 $this->load->view('register/user', $data);
             }
-        } else if($page=='dashboard'){
-            if(!$this->session->userdata('login'))
-                redirect(site_url('login'));
+        }
+        else if($page == 'dashboard'){
+            $this->cekNotLogin();
             $this->load->view('dashboard/user/main');
+        }
+        else if($page == 'upload_proyek'){
+            $this->cekNotLogin();
+            if($this->input->post('upload')){
+                $this->actionUploadProyek();
+            }
+            else {
+                $data['message'] = $this->session->flashdata('msg');
+                $this->load->view('dashboard/user/upload_proyek');
+            }
         }
     }
     
@@ -50,9 +64,11 @@ class User extends CI_Controller {
 
             if(password_verify($this->input->post('password'), $user->password)){
                 $data_session = array(
-                    'login' => true,
-                    'email' => $user->email,
-                    'nama'  => $user->nama
+                    'login'  => true,
+                    'id_akun'=> $user->id,
+                    'email'  => $user->email,
+                    'nama'   => $user->nama,
+                    'priv'   => $user->priv
                 );
                 $this->session->set_userdata($data_session);
 
@@ -80,6 +96,12 @@ class User extends CI_Controller {
         }
 
         redirect(site_url('register'));
+    }
+
+    private function actionUploadProyek(){
+        $this->load->model('project_model');
+        $this->project_model->addProject();
+        echo "Berhasil";
     }
     
     public function profile(){

@@ -33,3 +33,9 @@ $route['policy'] = 'user/policy';
     
 //Logout
 $route['logout'] = 'home/logout';
+
+
+
+//Fungsi dulu, desain belakangan
+//Kalo udah ada desain baru pindah keatas
+$route['dashboard/upload-proyek'] = 'user/view/upload_proyek';
