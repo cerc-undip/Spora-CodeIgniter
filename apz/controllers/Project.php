@@ -18,8 +18,9 @@ class Project extends CI_Controller {
 
     public function detailProject($id)
     {
-      $data['view_name'] = 'detailProject';
-      $this->load->view('template/main',$data);
+        $data['project'] = $this->project_model->getProjectById($id)->result();
+        $data['content'] = 'project/detailProject';
+        $this->load->view('dashboard/user/main', $data);
     }
 
 

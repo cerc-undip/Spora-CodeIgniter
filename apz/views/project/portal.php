@@ -28,7 +28,7 @@
           <div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
             <h4 class="blog_title"><?= $pr-> nama ?></h4>
             <span class="blog_meta"><?= $pr -> tempat ?> | <?= $pr -> tgl ?></span>
-            <a class="blog_more" href="<?= site_url('detailProduct/'.$pr->id) ?>">Baca selengkapnya</a>
+            <a class="blog_more" href="<?= site_url('detailProject/'.$pr->id) ?>">Baca selengkapnya</a>
           </div>
         </div>
       </div>

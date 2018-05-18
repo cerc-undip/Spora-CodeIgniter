@@ -34,5 +34,14 @@ class Project_model extends CI_Model {
         $q = $this->db->get('proyek');
         return $q;
     }
+    
+    public function getProjectById($id){
+        $where = array(
+            'id' => $id
+        );
+        
+        $q = $this->db->get_where('proyek', $where);
+        return $q;
+    }
 
 }
