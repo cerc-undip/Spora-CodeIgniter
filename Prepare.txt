@@ -11,7 +11,7 @@ Bahasan :
 3. Sistem perangkat lunak
    Theme : Portal E-comerce (Coloshop), Dashboard (AdminLTE)
    - ERD
-ERD agak dirombak, 1 akun bisa 3 previlleges (pembeli, trainer, publisher), nanti ada astu tabel khusus buat login(id, usernme, pssword, fulname, email, id_vol),waktu pertamakali bikin cuma isi email, pass, retype password, fullname) nanti id_vol kita set default 0, id kita set auto_increment, jadi sebelum user minat buat join volunteer dia bakalan diset 0, kalo mau join nanti ngisii data yg ada di tabel volunter, nanti id dari volunter diii ke id_vol.  
+ERD agak dirombak, 1 akun bisa 3 previlleges (pembeli, trainer, publisher), nanti ada astu tabel khusus buat login(id, pssword, fulname, email, id_vol),waktu pertamakali bikin cuma isi email, pass, retype password, fullname) nanti id_vol kita set default 0, id kita set auto_increment, jadi sebelum user minat buat join volunteer dia bakalan diset 0, kalo mau join nanti ngisii data yg ada di tabel volunter, nanti id dari volunter diii ke id_vol.  
    - Flow Chart
    - 
 Landing page : campuran kitabisa+qlapak
@@ -106,3 +106,6 @@ Bawa re-source :
 Daftar ulang Jum'at 06:30-07:15
 Final Round 08:00-08:00 18 Mei-19 Mei 2018
 10 Tim pitching dg waktu 10 menit
+
+--- FEATURE TAMBAHAN ---
+Rating untuk trainer
