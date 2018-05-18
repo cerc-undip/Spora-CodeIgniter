@@ -207,6 +207,7 @@ class User extends CI_Controller {
         }
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
     public function now(){
         $data['content'] = 'dashboard/user/dashboard_now';
@@ -224,6 +225,9 @@ class User extends CI_Controller {
         $this->load->view('dashboard/user/main', $data);
     }
     
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
