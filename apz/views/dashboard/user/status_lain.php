@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-8">
             <div class="card card-body">
-                <h4 class="card-title">&nbsp;Proyek anda saat ini :</h4>
+                <h4 class="card-title">Pilihan tidak tersedia pada status Anda, silahkan ganti status Volunteer di halaman <a href="<?= site_url('profile'); ?>">Profil</a>.</h4>
             </div>
         </div>
     </div>

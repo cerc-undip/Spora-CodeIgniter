@@ -17,6 +17,14 @@ class User extends CI_Controller {
             redirect(site_url('login'));
     }
 
+    private function cekNotVolunteer(){
+        $vol = $this->user_model->getVolunteer();
+        if($vol == NULL)
+            redirect(site_url('dashboard/now'));
+        if($vol->confirmed == 0)
+            redirect(site_url('dashboard/now'));
+    }
+
     private function generateAlamat(){
         $alamat = "";
         $n = "1234567890qwertyuiopasdfghjklzxcvbnm";
@@ -73,7 +81,6 @@ class User extends CI_Controller {
             else {
                 echo "Akun anda belum terkonfirmasi menjadi volunteer. Harap tunggu hingga Admin mengkonfirmasi, Terima kasih";
             }
-
         }
         else if($page == 'daftar_volunteer'){
             $this->cekNotLogin();
@@ -90,7 +97,9 @@ class User extends CI_Controller {
             }
             else {
                 $data['message'] = $this->session->flashdata('msg');
-                $this->load->view('dashboard/user/daftar_volunteer', $data);
+                $data['content'] = 'dashboard/user/daftar_volunteer';
+                $data['alamat']  = $this->user_model->getAlamat();
+                $this->load->view('dashboard/user/main', $data);
             }
         }
     }
@@ -121,7 +130,11 @@ class User extends CI_Controller {
     private function actionRegister(){
         $cekEmail = $this->user_model->checkEmail($this->input->post('email'));
         if($cekEmail->num_rows() == 0){
-            $this->user_model->addUser($this->input->post());
+            $this->user_model->addAkun($this->input->post());
+
+            $user = $this->user_model->getUser($this->input->post('email'));
+
+            $this->user_model->addUser($this->input->post(), $user->id);
             redirect(site_url());
         }
         else {
@@ -159,7 +172,7 @@ class User extends CI_Controller {
 
         if($cek->num_rows() == 0){
             $this->user_model->addVolunteer();
-            $this->session->set_flashdata('msg', '<h1>Terima kasih sudah mendaftar, itikad baik Anda sangat kami apresiasi. Silahkan tunggu sampai Admin Spora mengkonfirmasi pendaftaran Anda.</h1>');
+            $this->session->set_flashdata('msg', 'Terima kasih sudah mendaftar, itikad baik Anda sangat kami apresiasi. Silahkan tunggu sampai Admin Spora mengkonfirmasi pendaftaran Anda.');
         }
         else {
             $this->session->set_flashdata('msg', '<h1>No. KTP telah terdaftar sebelumnya.</h1>');
@@ -237,19 +250,55 @@ class User extends CI_Controller {
 
 >>>>>>> Stashed changes
     public function now(){
-        $data['content'] = 'dashboard/user/dashboard_now';
-        $this->load->view('dashboard/user/main', $data);
+        $vol = $this->user_model->getVolunteer();
+        if($vol == NULL){
+            $data['content'] = 'dashboard/user/bukan_vol';
+            $this->load->view('dashboard/user/main', $data);
+        }
+        else {
+            if($vol->confirmed == 0){
+                $data['content'] = 'dashboard/user/tunggu_volunteer';
+                $this->load->view('dashboard/user/main', $data);
+            }
+            else {
+                if($vol->status == 'D' || $vol->status == 'T'){
+                    $data['content'] = 'dashboard/user/dashboard_now';
+                    $this->load->view('dashboard/user/main', $data);
+                }
+                else {
+                    $data['content'] = 'dashboard/user/status_lain';
+                    $this->load->view('dashboard/user/main', $data);
+                }
+            }
+        }
+
     }
 
     public function own(){
-        $data['content'] = 'dashboard/user/dashboard_own';
-        $this->load->view('dashboard/user/main', $data);
+        $this->cekNotVolunteer();
+        $vol = $this->user_model->getVolunteer();
+        if($vol->status == 'D' || $vol->status == 'P'){
+            $data['content'] = 'dashboard/user/dashboard_own';
+            $this->load->view('dashboard/user/main', $data);
+        }
+        else {
+            $data['content'] = 'dashboard/user/status_lain';
+            $this->load->view('dashboard/user/main', $data);
+        }
     }
 
     public function addProject(){
-        $data['message'] = $this->session->flashdata('msg');
-        $data['content'] = 'dashboard/user/dashboard_add';
-        $this->load->view('dashboard/user/main', $data);
+        $this->cekNotVolunteer();
+        $vol = $this->user_model->getVolunteer();
+        if($vol->status == 'D' || $vol->status == 'P'){
+            $data['message'] = $this->session->flashdata('msg');
+            $data['content'] = 'dashboard/user/dashboard_add';
+            $this->load->view('dashboard/user/main', $data);
+        }
+        else {
+            $data['content'] = 'dashboard/user/status_lain';
+            $this->load->view('dashboard/user/main', $data);
+        }
     }
 <<<<<<< Updated upstream
     

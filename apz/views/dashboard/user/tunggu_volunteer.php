@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-8">
             <div class="card card-body">
-                <h4 class="card-title">&nbsp;Proyek anda saat ini :</h4>
+                <h4 class="card-title">Terima kasih telah mendaftarkan diri sebagai Volunteer, namun status Anda belum terkonfirmasi. Harap tunggu hingga Admin selesai mengkonfirmasi.</h4>
             </div>
         </div>
     </div>

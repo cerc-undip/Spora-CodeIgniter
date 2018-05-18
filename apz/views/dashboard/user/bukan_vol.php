@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-8">
             <div class="card card-body">
-                <h4 class="card-title">&nbsp;Proyek anda saat ini :</h4>
+                <h4 class="card-title">Anda belum terdaftar sebagai Volunteer. Yuk, kita bersama mensejaterakan negeri dengan mendaftar di link <a href="<?= site_url('dashboard/daftar-volunteer'); ?>">berikut ini</a>.</h4>
             </div>
         </div>
     </div>

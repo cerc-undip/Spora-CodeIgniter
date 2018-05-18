@@ -43,7 +43,7 @@ class User_model extends CI_Model {
     return $q->row();
   }
 
-  public function addUser($datas){
+  public function addAkun($datas){
     $data = array(
       'email'    => $datas['email'],
       'password' => password_hash($datas['password'], PASSWORD_BCRYPT),
@@ -53,15 +53,20 @@ class User_model extends CI_Model {
     $this->db->insert('akun', $data);
   }
 
+  public function addUser($datas, $id_akun){
+    $data = array(
+      'id_akun' => $id_akun,
+    );
+
+    $this->db->insert('user', $data);
+  }
+
   public function addVolunteer(){
     $data = array(
       'id_akun' => $this->session->userdata('id_akun'),
       'status'  => $this->input->post('status'),
-      'prov'    => $this->input->post('prov'),
-      'kab'     => $this->input->post('kab'),
-      'kec'     => $this->input->post('kec'),
-      'jalan'   => $this->input->post('jalan'),
-      'no_ktp'  => $this->input->post('no_ktp')
+      'no_ktp'  => $this->input->post('no_ktp'),
+      'telp' => $this->input->post('telp')
     );
 
     $this->db->insert('volunteer', $data);

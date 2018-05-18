@@ -89,7 +89,7 @@
                 </div>
             </div>
             
-            <?php $this->load->view($content) ?>
+            <?php $this->load->view($content); ?>
             
             <div class="newsletter">
                 <div class="container">
