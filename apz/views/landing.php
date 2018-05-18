@@ -23,7 +23,7 @@
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<img src="<?php echo base_url();?>assets/img/logo.png" style="">
+							<a href="<?= site_url(); ?>"><img src="<?php echo base_url();?>assets/img/logo.png" style=""></a>
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
