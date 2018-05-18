@@ -47,15 +47,7 @@ class User extends CI_Controller {
         }
         else if($page == 'dashboard'){
             $this->cekNotLogin();
-            if($this->input->post('now')){
-                $this->now();
-            } else if($this->input->post('own')){
-                $this->own();
-            } else if($this->input->post('addProject')){
-                $this->addProject();
-            } else {
-                $this->now();
-            }
+            $this->now();
         }
         else if($page == 'upload_project'){
             $this->cekNotLogin();
