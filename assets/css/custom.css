@@ -3,7 +3,7 @@
 }
 
 .rounded {
-    border-radius: 6px !important;
+    border-radius: 15px !important;
 }
 
 .img-raised {
@@ -130,6 +130,18 @@
   background: #3949ab;
   background: -webkit-linear-gradient(45deg, #3949ab 0%, #4fc3f7 100%)  ;
   background: linear-gradient(45deg, #3949ab 0%, #4fc3f7 100%)  ;
+}
+
+.gradient-45deg-indigo-light-blue:hover {
+  background: #3949ab;
+  background: -webkit-linear-gradient(45deg, #3949ab 100%, #4fc3f7 0%)  ;
+  background: linear-gradient(45deg, #3949ab 100%, #4fc3f7 0%)  ;
+}
+
+.gradient-45deg-indigo-light-blue:active {
+  background: #3949ab;
+  background: -webkit-linear-gradient(45deg, #3949ab 100%, #4fc3f7 0%)  ;
+  background: linear-gradient(45deg, #3949ab 100%, #4fc3f7 0%)  ;
 }
 
 .gradient-45deg-indigo-light-blue.gradient-shadow {
