@@ -13,17 +13,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden">
+<body class="hold-transition login-page " style="background:url(<?php echo base_url();?>assets/img/login-01.jpg); background-size:cover; background-repeat : no-repeat; overflow: hidden">
+
 <div class="login-box">
+  <center>
+    <img src="<?php echo base_url();?>assets/img/logo.png" style="">
+  </center>
 
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
   <div class="login-box-body">
     <p class="login-box-msg">Masuk sebagai user</p>
 
