@@ -93,7 +93,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title new_arrivals_title">
-						<h2>New Arrivals</h2>
+						<h2>Baru</h2>
 					</div>
 				</div>
 			</div>
@@ -330,7 +330,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title new_arrivals_title">
-						<h2>Best Sellers</h2>
+						<h2>Penjualan Terlaris</h2>
 					</div>
 				</div>
 			</div>
@@ -538,8 +538,8 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>free shipping</h6>
-							<p>Suffered Alteration in Some Form</p>
+							<h6>Bebas biaya pengiriman</h6>
+							<p>Seluruh pengi</p>
 						</div>
 					</div>
 				</div>
@@ -547,8 +547,8 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>cach on delivery</h6>
-							<p>The Internet Tend To Repeat</p>
+							<h6>Full Diskon</h6>
+							<p>Dapatkan banyak promo dan diskon</p>
 						</div>
 					</div>
 				</div>
@@ -556,8 +556,8 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>45 days return</h6>
-							<p>Making it Look Like Readable</p>
+							<h6>Garansi 1 minggu</h6>
+							<p>Apabila barang rusak dapat diganti</p>
 						</div>
 					</div>
 				</div>
@@ -565,7 +565,7 @@
 					<div class="benefit_item d-flex flex-row align-items-center">
 						<div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
 						<div class="benefit_content">
-							<h6>opening all week</h6>
+							<h6>Layanan Setiap Hari</h6>
 							<p>8AM - 09PM</p>
 						</div>
 					</div>
@@ -581,7 +581,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title">
-						<h2>Latest Blogs</h2>
+						<h2>Jadilah Relawan Spora</h2>
 					</div>
 				</div>
 			</div>
