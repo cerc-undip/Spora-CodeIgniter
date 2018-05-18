@@ -162,10 +162,27 @@ class User extends CI_Controller {
 
     public function profile(){
         $this->cekNotLogin();
+        $data['volunteer'] = $this->user_model->getVolunteer();
+        $data['alamat']    = $this->user_model->getAlamat();
 
         if($this->input->post('simpan_profil')){
-            $this->user_model->updateUser();
+            if($data['volunteer'] == NULL){
+                $this->user_model->updateUser();
+            }
+            else {
+                $this->user_model->updateUser();
+                $this->user_model->updateVolunteer();
+            }
+
             $this->session->set_userdata(['nama' => $this->input->post('nama')]);
+            $this->session->set_flashdata('msg', 'Berhasil menyimpan profil.');
+            $this->session->set_flashdata('type', 'success');
+            redirect(site_url('profile'));
+        }
+        else if($this->input->post('simpan_alamat')){
+            $this->user_model->updateAlamat();
+            $this->session->set_flashdata('msg', 'Berhasil menyimpan alamat.');
+            $this->session->set_flashdata('type', 'success');
             redirect(site_url('profile'));
         }
         else if($this->input->post('ubah_pass')){
@@ -173,28 +190,16 @@ class User extends CI_Controller {
 
             if(password_verify($this->input->post('old-password'), $user->password)){
                 if($this->input->post('password') == $this->input->post('password2')){
-                    $this->user_model->updatePass();
-                    $this->session->set_flashdata('type', 'success');
-                    $this->session->set_flashdata('msg', 'Password berhasil diganti.');
-                }
-                else {
-                    // password tidak sama
-                    $this->session->set_flashdata('type', 'warning');
-                    $this->session->set_flashdata('msg', 'Password tidak cocok.');
-                }
-            }
-            else {
-                // Password lama salah
-                $this->session->set_flashdata('type', 'warning');
-                $this->session->set_flashdata('msg', 'Password salah.');
-            }
-
-
-            if(password_verify($this->input->post('old-password'), $user->password)){
-                if($this->input->post('password') == $this->input->post('password2')){
-                    $this->user_model->updatePass();
-                    $this->session->set_flashdata('type', 'success');
-                    $this->session->set_flashdata('msg', 'Password berhasil diganti.');
+                    if(password_verify($this->input->post('password'), $user->password)){
+                        // password lama sama dengan password baru
+                        $this->session->set_flashdata('type', 'warning');
+                        $this->session->set_flashdata('msg', 'Password sama saja. Password tidak diubah.');
+                    }
+                    else {
+                        $this->user_model->updateUserPass();
+                        $this->session->set_flashdata('type', 'success');
+                        $this->session->set_flashdata('msg', 'Password berhasil diubah.');
+                    }
                 }
                 else {
                     // password tidak sama

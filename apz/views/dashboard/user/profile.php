@@ -36,9 +36,58 @@
                     </div>
                 </div>
                 
+                <?php if($volunteer != NULL){ ?>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" name="no_ktp" placeholder="No. KTP" value="<?= $volunteer->no_ktp; ?>" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" name="telp" placeholder="No. Telepon" value="<?= $volunteer->telp; ?>">
+                    </div>
+                </div>
+
+                <?php } ?>
+
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-12">
                         <input type="submit" class="btn gradient-45deg-deep-purple-purple rounded white-font" name="simpan_profil" value="Simpan">
+                    </div>
+                </div>
+            </form>
+
+            <div class="clearfix"></div>
+            <br>
+
+            <h4 class="card-title">&nbsp;Ubah Alamat</h4>
+            <form class="form-horizontal" action="" method="post">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" name="prov" placeholder="Provinsi" value="<?= $alamat->prov; ?>" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" name="kab" placeholder="Kabupaten" value="<?= $alamat->kab; ?>" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" name="kec" placeholder="Kecamatan" value="<?= $alamat->kec; ?>" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" name="jalan" placeholder="Jalan" value="<?= $alamat->jalan; ?>" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-12">
+                        <input type="submit" class="btn gradient-45deg-deep-purple-purple rounded white-font" name="simpan_alamat" value="Simpan">
                     </div>
                 </div>
             </form>
@@ -55,19 +104,19 @@
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="password" id="old-password" class="form-control" placeholder="Password lama" required>
+                        <input type="password" id="old-password" class="form-control" name="old-password" placeholder="Password lama" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="password" id="password" class="form-control" placeholder="Password" required>
+                        <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="password" id="password2" class="form-control" placeholder="Ulangi password" required>
+                        <input type="password" id="password2" class="form-control" name="password2" placeholder="Ulangi password" required>
                     </div>
                 </div>
                 

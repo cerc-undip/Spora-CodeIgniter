@@ -28,9 +28,19 @@ class User_model extends CI_Model {
     return $q->row();
   }
 
+  public function getVolunteer(){
+    $q = $this->db->get_where('volunteer', ['id_akun' => $this->session->userdata('id_akun')]);
+    return $q->row();
+  }
+
   public function getVolunteerConfirm(){
     $q = $this->db->get_where('volunteer', ['id_akun' => $this->session->userdata('id_akun')]);
     return $q->row()->confirmed;
+  }
+
+  public function getAlamat(){
+    $q = $this->db->get_where('user', ['id_akun' => $this->session->userdata('id_akun')]);
+    return $q->row();
   }
 
   public function addUser($datas){
@@ -67,13 +77,36 @@ class User_model extends CI_Model {
     $this->db->update('akun', $data);
   }
 
+  public function updateVolunteer(){
+    $this->db->where('id_akun', $this->session->userdata('id_akun'));
+
+    $data = array(
+      'telp' => $this->input->post('telp')
+    );
+
+    $this->db->update('volunteer', $data);
+  }
+
   public function updateUserPass(){
     $this->db->where('email', $this->session->userdata('email'));
 
     $data = array(
-      'password' => $this->input->post('password')
+      'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT)
     );
 
     $this->db->update('akun', $data);
+  }
+
+  public function updateAlamat(){
+    $this->db->where('id_akun', $this->session->userdata('id_akun'));
+
+    $data = array(
+      'prov' => $this->input->post('prov'),
+      'kab'  => $this->input->post('kab'),
+      'kec'  => $this->input->post('kec'),
+      'jalan'=> $this->input->post('jalan')
+    );
+
+    $this->db->update('user', $data);
   }
 }
