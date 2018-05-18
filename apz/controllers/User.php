@@ -162,8 +162,20 @@ class User extends CI_Controller {
     }
 
     public function profile(){
-        $data['content'] = 'dashboard/user/profile';
-        $this->load->view('dashboard/user/main', $data);
+        $this->cekNotLogin();
+
+        if($this->input->post('simpan_profil')){
+            $this->user_model->updateUser();
+            $this->session->set_userdata(['nama' => $this->input->post('nama')]);
+            redirect(site_url('profile'));
+        }
+        else if($this->input->post('ubah_pass')){
+
+        }
+        else {
+            $data['content'] = 'dashboard/user/profile';
+            $this->load->view('dashboard/user/main', $data);
+        }
     }
     
     public function shop(){

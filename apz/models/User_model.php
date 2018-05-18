@@ -57,4 +57,13 @@ class User_model extends CI_Model {
     $this->db->insert('volunteer', $data);
   }
 
+  public function updateUser(){
+    $this->db->where('email', $this->session->userdata('email'));
+
+    $data = array(
+      'nama' => $this->input->post('nama')
+    );
+
+    $this->db->update('akun', $data);
+  }
 }

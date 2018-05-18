@@ -30,17 +30,19 @@
                 <h5 class="card-title">Teruskan kebaikanmu disini!</h5>
                 <form class="form-horizontal" action="<?= site_url('login') ?>" method="post">
                     <div class="form-group">
-                        <?= $message; ?>
+                        <div id="error-message" class="col-sm-8">
+                            <?= $message; ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-8">
-                            <input type="email" name="email" class="form-control" placeholder="email">
+                            <input type="email" name="email" class="form-control" placeholder="email" required>
                             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-8">
-                            <input type="password" name="password" class="form-control" placeholder="password">
+                            <input type="password" name="password" class="form-control" placeholder="password" required>
                             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         </div>
                     </div>
