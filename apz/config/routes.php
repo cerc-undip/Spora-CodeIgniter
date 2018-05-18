@@ -14,5 +14,8 @@ $route['sudo'] = 'admin/view/login';
 $route['register'] = 'user/view/register';
 
 //Dashboard
-$route['dashboard/user'] = 'user/view/dashboard';
-$route['dashboard/admin'] = 'admin/view/dashboard';
+$route['dashboard'] = 'user/view/dashboard';
+$route['dash-admin'] = 'admin/view/dashboard';
+
+
+$route['logout'] = 'home/logout';

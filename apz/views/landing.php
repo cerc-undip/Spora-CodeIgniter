@@ -35,8 +35,19 @@
 								<li class="account">
 									<a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
 									<ul class="account_selection">
-										<li><a href="#"><i class="fa fa-user-circle"></i>Profil</a></li>
-										<li><a href="#"><i class="fa fa-sign-out"></i>Keluar</a></li>
+										<?php if($this->session->userdata('login')){ ?>
+
+											<li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle"></i>Profil</a></li>
+											<li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+											<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out"></i>Keluar</a></li>
+
+										<?php } else { ?>
+										
+											<li><a href="<?= site_url('login'); ?>"><i class="fa fa-user-circle"></i>Masuk</a></li>
+											<li><a href="<?= site_url('register'); ?>"><i class="fa fa-sign-out"></i>Daftar</a></li>
+
+										<?php } ?>
+
 									</ul>
 								</li>
 							</ul>
@@ -58,8 +69,19 @@
 			<ul class="menu_top_nav">
 				<li class="menu_item has-children"><a href="#">Akun Saya<i class="fa fa-angle-down"></i></a>
 					<ul class="menu_selection">
-						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Masuk</a></li>
-						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Daftar</a></li>
+						<?php if($this->session->userdata('login')){ ?>
+							
+							<li><a href="<?= site_url('profil'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i>Profil</a></li>
+							<li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard</a></li>
+							<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Keluar</a></li>
+
+						<?php } else { ?>
+
+							<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Masuk</a></li>
+							<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Daftar</a></li>
+
+						<?php } ?>
+
 					</ul>
 				</li>
 				<li><a href="#">Beranda</a></li>
