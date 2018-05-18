@@ -8,8 +8,15 @@ class User extends CI_Controller {
         $this->load->model('user_model');
     }
 
+    private function cekLogin(){
+        if($this->session->userdata('login'))
+            redirect(site_url());
+    }
+
     public function view($page){
         if($page=='login'){
+            $this->cekLogin();
+
             if($this->input->post('login')){
                 $this->actionLogin();
             }
@@ -19,6 +26,8 @@ class User extends CI_Controller {
             }
         }
         else if($page=='register'){
+            $this->cekLogin();
+            
             if($this->input->post('register')){
                 $this->actionRegister();
             }
