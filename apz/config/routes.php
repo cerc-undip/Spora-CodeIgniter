@@ -26,4 +26,3 @@ $route['proyek'] = 'project';
 
 //Logout
 $route['logout'] = 'home/logout';
-
