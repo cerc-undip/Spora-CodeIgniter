@@ -18,10 +18,6 @@
 	<div class="super_container">
 	<!-- Header -->
 	<header class="header trans_300">
-		<!-- Top Navigation -->
-
-		<!-- Main Navigation -->
-
 		<div class="main_nav_container">
 			<div class="container">
 				<div class="row">
@@ -35,10 +31,14 @@
 								<li><a href="#">Spora Market</a></li>
 								<li><a href="#">Spora Phyte</a></li>
 								<li><a href="contact.html">Tentang</a></li>
-							</ul>
-							<ul class="navbar_user">
-								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                <li class="account">
+                                    <a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
+                                    <ul class="account_selection">
+										<li><a href="#"><i class="fa fa-user-circle"></i>Profil</a></li>
+										<li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+									</ul>
+                                </li>
 							</ul>
 							<div class="hamburger_container">
 								<i class="fa fa-bars" aria-hidden="true"></i>

@@ -18,13 +18,6 @@
 	<div class="super_container">
 	<!-- Header -->
 	<header class="header trans_300">
-		<!-- Top Navigation -->
-
-		<!-- Main Navigation -->
-
-        <div class="top_nav">
-        </div>
-        
 		<div class="main_nav_container">
 			<div class="container">
 				<div class="row">
@@ -42,8 +35,8 @@
                                 <li class="account">
                                     <a href="#"><i class="fa fa-user" style="min-width:30px"></i>&nbsp; Account</a>
                                     <ul class="account_selection">
-										<li><a href="#"><i class="fa fa-sign-in"></i>Sign In</a></li>
-										<li><a href="#"><i class="fa fa-user-plus"></i>Register</a></li>
+										<li><a href="#"><i class="fa fa-user-circle"></i>Profil</a></li>
+										<li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
 									</ul>
                                 </li>
 							</ul>

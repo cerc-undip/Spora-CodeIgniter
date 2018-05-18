@@ -18,10 +18,6 @@
 	<div class="super_container">
 	<!-- Header -->
 	<header class="header trans_300">
-		<!-- Top Navigation -->
-
-		<!-- Main Navigation -->
-
 		<div class="main_nav_container">
 			<div class="container">
 				<div class="row">
