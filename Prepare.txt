@@ -1,0 +1,108 @@
+Bahasan : 
+1. Persiapan berangkat
+   - Berangkat Kamis 14:00
+   - Titik kumpul di kos vian
+   - nge-grab ke terminal 
+   - Buka puasa McD
+   - Hotel Laxston(sementara 250k)
+2. Proposal sponsor
+   - sebelum kompetisi
+   - pake dana delegasi departemen
+3. Sistem perangkat lunak
+   Theme : Portal E-comerce (Coloshop), Dashboard (AdminLTE)
+   - ERD
+ERD agak dirombak, 1 akun bisa 3 previlleges (pembeli, trainer, publisher), nanti ada astu tabel khusus buat login(id, usernme, pssword, fulname, email, id_vol),waktu pertamakali bikin cuma isi email, pass, retype password, fullname) nanti id_vol kita set default 0, id kita set auto_increment, jadi sebelum user minat buat join volunteer dia bakalan diset 0, kalo mau join nanti ngisii data yg ada di tabel volunter, nanti id dari volunter diii ke id_vol.  
+   - Flow Chart
+   - 
+Landing page : campuran kitabisa+qlapak
+	- Jadi waktu pertama kali buka nanti ada carosel, isinya tiga gambar, gambar 1 buat jelasin web itu tentang apa, gambar2 jelasin web ttg ecomerce, gabar3 jelasin tentang "become volunteer". kao di klik bakalan mengarah ke halaman bgian bawah (ecomerce/become volunteer)
+	- nanti ada navigation bar
+	- div berikutnya isinya 4 promo terkini
+	- div berikutnya isinya ecomece kayak tokppd, nanti dibawh aada button "lihat selengkapnya" nanti mengarah ke halaman portal ecmoece yg lengkap
+	- div berikutnya isinya kayak kitabisa bagian bawah, nanti dibawah ada button "lihat selengkapnya" nnti mengarah ke halaman portal projek yang lengkap
+
+register:
+	- dibagi menjadi 2
+	- untuk pembeli biasa setelah register status volunteer ama verifikasi 0, data register cuma yang disebutin tito diatas (email, pass, retype pass, fullname)
+	- untuk volunteer setelah register status verifikasi 0 data register cuma yang disebutin tito diatas (email, pass, retype pass, fullname, no ktp, alamat, tempat, tanggal lahir)
+
+Login :
+	- login user
+	- login admin disembunyiin
+	- email, password
+
+Portal Product : 
+	- Product semuanya
+	- List produk isinya : Nama produk, nama proyek, harga
+	- search - hasbi masih mikir pagination
+	- pojok kanan ada profil menu dropdown
+	- #GerakanPeduliHasbi
+
+Portal Projek :
+	- Projek semua
+	- List projek isinya : Nama, publisher, lokasi, read more
+
+Detail Produk :
+	- Sama kaya di coloshop
+
+Sistem Pembayaran :
+	- Pake sistem apoteknya Hasbi
+
+Detail Projek :
+	- Sama kaya kita bisa
+	- Kalo klik ambil projek ke halaman hak dan kewajiban, kalo setuju tidak bisa dibatalkan
+	- Publisher tidak menjadi trainer di projek sendiri
+	- verifikasi trainer lewat publisher
+	- Kalo udah diambil, tombol ambilnya ilang, ganti sudah diambil + nama pengambil
+
+Dashboard :
+	- pembeli biasa
+	- volunteer
+	- ada notif jika project diambil
+
+Dashboard Publisher :
+	- List projeknya sendiri
+	- Button tambah projek
+	- Search 
+
+Dashboard Trainer :
+	- Trainer cuma boleh ngambil satu projek
+	- 
+
+4. Alur pengerjaan
+   	- Pipis, eek
+	- 
+
+5. Pembagian Job 
+   - Aufal & Mukhlis : Pitching
+   - Tito : Desain 24 jam
+   - Hasbi & Vian
+
+Wajib bawa :
+- Laptop
+- Charger
+- HP
+- Flashdisk
+- Mouse
+- Headset
+- KTM asli
+- Baju berkerah
+- Celana panjang
+- Sepatu
+- Peralatan mandi
+- Peralatan ibadah
+- Kresek
+- Sendal
+- Handuk
+- Dompet lengkap ID Card + ATM
+- Kabel roll
+
+Bawa re-source :
+- ERD
+- FlowChart
+- CI
+- 
+
+Daftar ulang Jum'at 06:30-07:15
+Final Round 08:00-08:00 18 Mei-19 Mei 2018
+10 Tim pitching dg waktu 10 menit
