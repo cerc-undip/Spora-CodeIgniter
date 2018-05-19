@@ -102,7 +102,8 @@ class User_model extends CI_Model {
     $this->db->where('id_akun', $this->session->userdata('id_akun'));
 
     $data = array(
-      'telp' => $this->input->post('telp')
+      'telp' => $this->input->post('telp'),
+      'status' => $this->input->post('status')
     );
 
     $this->db->update('volunteer', $data);
