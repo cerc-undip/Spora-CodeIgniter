@@ -26,9 +26,9 @@
           <div class="blog_item">
           <div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project1.jpg)"></div>
           <div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-            <h4 class="blog_title"><?= $pr-> nama ?></h4>
-            <span class="blog_meta"><?= $pr -> tempat ?> | <?= $pr -> tgl ?></span>
-            <a class="blog_more" href="<?= site_url('detailProject/'.$pr->id) ?>">Baca selengkapnya</a>
+            <h4 class="blog_title"><?= $pr->nama ?></h4>
+            <span class="blog_meta"><?= $pr->tempat ?> | <?= $pr->tgl ?></span>
+            <a class="blog_more" href="<?= site_url('project-detail/'.$pr->id.'/'.$pr->slug) ?>">Baca selengkapnya</a>
           </div>
         </div>
       </div>

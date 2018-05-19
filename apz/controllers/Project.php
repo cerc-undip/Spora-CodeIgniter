@@ -11,14 +11,13 @@ class Project extends CI_Controller {
     }
     
     public function index(){
-        $data['project'] = $this->project_model->getProject()->result();
+        $data['project'] = $this->project_model->getProject();
         $data['content'] = 'project/portal';
         $this->load->view('dashboard/user/main', $data);
     }
 
-    public function detailProject($id)
-    {
-        $data['project'] = $this->project_model->getProjectById($id)->result();
+    public function detailProject($id, $slug){
+        $data['project'] = $this->project_model->getProjectById($id, $slug);
         $data['content'] = 'project/detailProject';
         $this->load->view('dashboard/user/main', $data);
     }

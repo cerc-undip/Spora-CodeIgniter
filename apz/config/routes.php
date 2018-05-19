@@ -24,7 +24,7 @@ $route['dash-admin'] = 'admin/mainMenu';
 
 //Project
 $route['project'] = 'project';
-$route['detailProject/(:any)'] = 'project/detailProject/$1';
+$route['project-detail/(:num)/(:any)'] = 'project/detailProject/$1/$2';
 
 //Profile
 $route['profile'] = 'user/profile';

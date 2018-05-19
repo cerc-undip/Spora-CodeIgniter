@@ -31,17 +31,18 @@ class Project_model extends CI_Model {
     }
     
     public function getProject(){
-        $q = $this->db->get('proyek');
-        return $q;
+        $q = $this->db->get('proyek', ['status' => 1]);
+        return $q->result();
     }
     
-    public function getProjectById($id){
+    public function getProjectById($id, $slug){
         $where = array(
-            'id' => $id
+            'id' => $id,
+            'slug' => $slug
         );
         
         $q = $this->db->get_where('proyek', $where);
-        return $q;
+        return $q->result();
     }
 
 }
