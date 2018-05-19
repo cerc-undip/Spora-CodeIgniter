@@ -35,14 +35,14 @@
                                         <li><a href="<?= site_url('dash-admin'); ?>">Dashboard</a></li>
                                         <li class="account">
                                             <a href="#"><i class="fa fa-user" style="min-width:30px"></i>
-                                                <?php if($this->session->userdata('nama')){
-                                                    echo explode(" ", $this->session->userdata('nama'))[0];
+                                                <?php if($this->session->userdata('nama_admin')){
+                                                    echo explode(" ", $this->session->userdata('nama_admin'))[0];
                                                     } else { ?>
                                                     &nbsp; Akun
                                                 <?php } ?>
                                             </a>
                                             <ul class="account_selection" style="width:200px">
-                                                <?php if($this->session->userdata('login')){ ?>
+                                                <?php if($this->session->userdata('login_admin')){ ?>
                                                 <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out"></i>Keluar</a></li>
                                                 <?php } else { ?>
                                                 <li><a href="<?= site_url('login'); ?>"><i class="fa fa-user-circle"></i>Masuk</a></li>

@@ -50,6 +50,16 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <select class="form-control" name="status">
+                          <option value="P"<?= $volunteer->status == 'P' ? ' selected' : '' ?>>Publisher</option>
+                          <option value="T"<?= $volunteer->status == 'T' ? ' selected' : '' ?>>Trainer</option>
+                          <option value="D"<?= $volunteer->status == 'D' ? ' selected' : '' ?>>Keduanya</option>
+                        </select>
+                    </div>
+                </div>
+
                 <?php } ?>
 
                 <div class="form-group">

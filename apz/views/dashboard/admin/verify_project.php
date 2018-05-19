@@ -27,6 +27,9 @@
         </div>
         <div class="col-md-8">
             <div class="row">
+                <center>
+                    <h3>Verifikasi Proyek</h3>
+                </center>
                 <?= $message; ?>
                 <table class="table table-hover">
                     <thead>
