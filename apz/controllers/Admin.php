@@ -71,11 +71,15 @@ class Admin extends CI_Controller {
     }
     
     public function mainMenu(){
+        $data['users'] = $this->admin_model->getUser();
+        $data['message'] = $this->session->flashdata('msg');
         $data['content'] = 'dashboard/admin/verify_user';
         $this->load->view('dashboard/admin/main', $data);
     }
     
     public function verifProject(){
+        $data['projects'] = $this->admin_model->getProyek();
+        $data['message'] = $this->session->flashdata('msg');
         $data['content'] = 'dashboard/admin/verify_project';
         $this->load->view('dashboard/admin/main', $data);
     }
@@ -111,5 +115,24 @@ class Admin extends CI_Controller {
             $data['content'] = 'dashboard/admin/add_product';
             $this->load->view('dashboard/admin/main', $data);
         }
+    }
+
+    public function konfirmasi($id_vol){
+        $this->admin_model->addKonfirmasi($id_vol);
+        $this->admin_model->updateStatusVol($id_vol);
+        $this->session->set_flashdata('type', 'success');
+        $this->session->set_flashdata('msg', 'Berhasil mengkonfirmasi volunteer');
+        redirect(site_url('verify/user'));
+    }
+
+    public function konfirmasi_proyek($id_proyek, $slug){
+        $cek = $this->admin_model->checkProyek($id_proyek, $slug);
+        if($cek->num_rows() > 0){
+            $this->admin_model->updateProyek($id_proyek);
+            $this->session->set_flashdata('type', 'success');
+            $this->session->set_flashdata('msg', 'Berhasil mengkonfirmasi proyek');
+        }
+        
+        redirect(site_url('verify/project'));
     }
 }

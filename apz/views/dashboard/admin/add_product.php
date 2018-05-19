@@ -67,25 +67,6 @@
 
 <script>
 $(function () {
-    $("#ubah-pass").click(function(e) {
-        var password  = $("#password").val();
-        var password2 = $("#password2").val();
-
-        if(password.length < 6){
-          $("#pass-error-message").empty();
-          $("#pass-error-message").append("<div class=\"alert alert-danger\">Password minimal 6 karakter alfanumerik.</div>")
-          return false;
-        }
-
-        if (password != password2) {
-          $("#pass-error-message").empty();
-          $("#pass-error-message").append("<div class=\"alert alert-danger\">Password tidak cocok.</div>")
-          return false;
-        }
-
-        return true;
-    });
-
     <?php if($message){ ?>
 
     swal("", "<?= $message; ?>", "<?= $type; ?>");

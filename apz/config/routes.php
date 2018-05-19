@@ -39,6 +39,8 @@ $route['product/add'] = 'admin/addProduct';
 //Verification
 $route['verify/user'] = 'admin/mainMenu';
 $route['verify/project'] = 'admin/verifProject';
+$route['confirm/(:num)'] = 'admin/konfirmasi/$1';
+$route['confirm_proyek/(:num)/(:any)'] = 'admin/konfirmasi_proyek/$1/$2';
 
 //Term and Condition
 $route['help'] = 'user/help';

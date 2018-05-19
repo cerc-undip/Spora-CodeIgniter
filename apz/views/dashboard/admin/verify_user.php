@@ -27,50 +27,31 @@
         </div>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-lg-4 blog_item_col">
-                    <p></p>
-                    <div class="blog_item">
-                        <div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project1.jpg)"></div>
-                        <div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="blog_title">Here are the trends I see coming this fall</h4>
-                            <span class="blog_meta">by admin | dec 01, 2017</span>
-                            <a class="blog_more" href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 blog_item_col">
-                    <p></p>
-                    <div class="blog_item">
-                        <div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project1.jpg)"></div>
-                        <div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="blog_title">Here are the trends I see coming this fall</h4>
-                            <span class="blog_meta">by admin | dec 01, 2017</span>
-                            <a class="blog_more" href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 blog_item_col">
-                    <p></p>
-                    <div class="blog_item">
-                        <div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project1.jpg)"></div>
-                        <div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="blog_title">Here are the trends I see coming this fall</h4>
-                            <span class="blog_meta">by admin | dec 01, 2017</span>
-                            <a class="blog_more" href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 blog_item_col">
-                    <p></p>
-                    <div class="blog_item">
-                        <div class="blog_background" style="background-image:url(<?php echo base_url()?>assets/img/project1.jpg)"></div>
-                        <div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-                            <h4 class="blog_title">Here are the trends I see coming this fall</h4>
-                            <span class="blog_meta">by admin | dec 01, 2017</span>
-                            <a class="blog_more" href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
+                <?= $message; ?>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#ID</th>
+                            <th>Email</th>
+                            <th>Nama</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($users as $user): ?>
+                            <tr>
+                                <td><?= $user->id; ?></td>
+                                <td><?= $user->email; ?></td>
+                                <td><?= $user->nama; ?></td>
+                                <td><?= $user->status; ?></td>
+                                <td>
+                                    <a href="<?= site_url('confirm/'.$user->id_vol); ?>">Konfirmasi</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
