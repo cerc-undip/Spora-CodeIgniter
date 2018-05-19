@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 18 Mei 2018 pada 17.54
+-- Generation Time: 19 Mei 2018 pada 03.20
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -60,7 +60,9 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`id`, `email`, `password`, `nama`, `priv`) VALUES
 (1, 'me@spectcore.com', '$2y$10$MrkIiDOdnmBH17KL.Usm.eNhKwKOo1a3iqOGXigbGobof7VFLyXA2', 'Spectcore', ''),
-(2, 'fnyhsbi@gmail.com', '$2y$10$zfH34edGRAULlwa8brz6neOsCCCUE/31UDLd/lQYEbns..HBTb8Gu', 'Fanny Hasbi', '');
+(2, 'fnyhsbi@gmail.com', '$2y$10$kKK4uz.tZAdvUST3OJM7nuFLHfGi6VQYxx0y8/WESfHSHzsGX0EXm', 'Fanny Hasbi', ''),
+(3, 'me@example.com', '$2y$10$01/XxYFRhRTcXAvNJkjliO39nKRz1SzawjT.OOCvIBctpHNKueBLy', 'Me', 'U'),
+(4, 'your@email.com', '$2y$10$946obiFX7CxfXYSdp3W6Xup0RRM3Kf7ml9wdsod2xJLma/9rbqPq.', 'Aufal', 'U');
 
 -- --------------------------------------------------------
 
@@ -74,6 +76,13 @@ CREATE TABLE `ambil_proyek` (
   `id_proyek` int(4) NOT NULL,
   `tgl` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `ambil_proyek`
+--
+
+INSERT INTO `ambil_proyek` (`id`, `id_vol`, `id_proyek`, `tgl`) VALUES
+(1, 3, 1, '2018-05-19 08:00:08');
 
 -- --------------------------------------------------------
 
@@ -113,6 +122,14 @@ CREATE TABLE `konfirmasi_vol` (
   `tgl` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `konfirmasi_vol`
+--
+
+INSERT INTO `konfirmasi_vol` (`id`, `id_admin`, `id_vol`, `tgl`) VALUES
+(1, 1, 4, '2018-05-18 23:44:27'),
+(2, 1, 5, '2018-05-18 23:45:23');
+
 -- --------------------------------------------------------
 
 --
@@ -143,8 +160,20 @@ CREATE TABLE `produk` (
   `harga` float NOT NULL,
   `stok` int(4) NOT NULL,
   `desk` text,
-  `tgl_upload` datetime NOT NULL
+  `tgl_upload` datetime NOT NULL,
+  `slug` varchar(50) NOT NULL,
+  `foto_utama` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id`, `nama`, `harga`, `stok`, `desk`, `tgl_upload`, `slug`, `foto_utama`) VALUES
+(1, 'Kacang Kulit', 6000, 100, 'Kacang kulit asli Purbalingga', '2018-05-19 06:04:43', 'kacang-kulit', 'pct_rtyt1km2igjz.png'),
+(2, 'Kacang Rebus', 15000, 50, 'Kacang asli Semarang', '2018-05-19 06:09:10', 'kacang-rebus', 'pct_h6okh2jygkw5.jpg'),
+(3, 'Kacang Isi', 13000, 20, 'Aasa', '2018-05-19 06:10:35', 'kacang-isi', 'pct_c98ipqf0y10g.jpg'),
+(4, 'Kacang Goreng', 5000, 12, 'Fasa', '2018-05-19 06:12:16', 'kacang-goreng', 'pct_45en0tdx2bti.png');
 
 -- --------------------------------------------------------
 
@@ -173,7 +202,7 @@ INSERT INTO `proyek` (`id`, `nama`, `id_vol`, `tempat`, `tgl`, `desk`, `status`,
 (2, 'Membuat Sepatu Desa Karigiwangan', 3, 'Brebes', '2018-05-18 21:38:20', 'Hehehe cuma contoh', 0, 'membuat-sepatu-desa-karigiwangan', 'awaw.jpg'),
 (3, 'Fanny Hasbi', 3, 'Brebes', '2018-05-18 21:41:42', 'Asa', 0, 'fanny-hasbi', 'awaw.jpg'),
 (4, 'Fanny Hasbi', 3, 'Brebes', '2018-05-18 21:55:22', 'fasasa', 0, 'fanny-hasbi', 'prj_w7l07nlwmv50.jpg'),
-(5, 'Cahyo', 3, 'Semarang', '2018-05-18 21:57:20', 'vasa', 0, 'cahyo', 'prj_j3iervrjslly.jpg');
+(5, 'Cahyo', 3, 'Semarang', '2018-05-18 21:57:20', 'vasa', 1, 'cahyo', 'prj_j3iervrjslly.jpg');
 
 -- --------------------------------------------------------
 
@@ -204,6 +233,16 @@ CREATE TABLE `user` (
   `jalan` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id`, `id_akun`, `prov`, `kab`, `kec`, `jalan`) VALUES
+(1, 2, 'Jawa Tengah', 'Brebes', 'Brebes', 'Jl. M. Yamin No. 47'),
+(2, 3, 'Jawa Tengah', NULL, NULL, NULL),
+(3, 1, NULL, NULL, NULL, NULL),
+(4, 4, 'Jawa Tengah', 'Brebes', 'Brebes', 'Jl. M. Yamin No. 47');
+
 -- --------------------------------------------------------
 
 --
@@ -228,8 +267,10 @@ CREATE TABLE `volunteer` (
 --
 
 INSERT INTO `volunteer` (`id`, `id_akun`, `status`, `confirmed`, `prov`, `kab`, `kec`, `jalan`, `no_ktp`, `telp`) VALUES
-(1, 2, 'P', 0, 'Jawa Tengah', 'Brebes', 'Brebes', 'M. Yamin No. 47', '3329xxxxxxxxxxxx', NULL),
-(3, 1, 'T', 1, 'Jawa Tengah', 'Brebes', 'Brebes', 'Jl. M. Yamin No. 47', '332xxxxxxxxxxxxx', NULL);
+(1, 2, 'P', 1, 'Jawa Tengah', 'Brebes', 'Brebes', 'M. Yamin No. 47', '3329xxxxxxxxxxxx', '085742466050'),
+(3, 1, 'T', 1, 'Jawa Tengah', 'Brebes', 'Brebes', 'Jl. M. Yamin No. 47', '332xxxxxxxxxxxxx', NULL),
+(4, 3, 'P', 1, '', '', '', NULL, '33xxxxxxxxxxxxxx', '085742466050'),
+(5, 4, 'D', 1, '', '', '', NULL, '33290xxxxxxxxxxx', '085742466050');
 
 --
 -- Indexes for dumped tables
@@ -334,12 +375,12 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `ambil_proyek`
 --
 ALTER TABLE `ambil_proyek`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `detail_pesan`
 --
@@ -354,12 +395,12 @@ ALTER TABLE `foto_proyek`
 -- AUTO_INCREMENT for table `konfirmasi_vol`
 --
 ALTER TABLE `konfirmasi_vol`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `proyek`
 --
@@ -374,12 +415,12 @@ ALTER TABLE `restok_produk`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `volunteer`
 --
 ALTER TABLE `volunteer`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
