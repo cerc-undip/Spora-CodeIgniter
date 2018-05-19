@@ -28,6 +28,24 @@
         <div class="col-md-8">
             <div class="card card-body">
                 <h4 class="card-title">&nbsp;Proyek anda saat ini :</h4>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Proyek</th>
+                            <th>Tempat</th>
+                            <th>Publisher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($projects as $pr): ?>
+                            <tr>
+                                <td><?= $pr->nama; ?></td>
+                                <td><?= $pr->tempat; ?></td>
+                                <td><?= $pr->nama_publisher; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

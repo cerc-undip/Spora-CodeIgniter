@@ -43,6 +43,22 @@ class User_model extends CI_Model {
     return $q->row();
   }
 
+  public function getProyekByIdVol($id_vol){
+    $q = "SELECT p.*, a.nama as nama_publisher
+          FROM proyek p
+          INNER JOIN volunteer v
+            ON p.id_vol = v.id
+          INNER JOIN akun a
+            ON v.id_akun = a.id
+          WHERE p.id IN (
+            SELECT id_proyek
+            FROM ambil_proyek
+            WHERE id_vol = 3
+          )";
+    $q = $this->db->query($q);
+    return $q->result();
+  }
+
   public function addAkun($datas){
     $data = array(
       'email'    => $datas['email'],

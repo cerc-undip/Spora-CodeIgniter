@@ -20,8 +20,8 @@
 									<h4>Informasi umum</h4>
 								</div>
 								<div class="tab_text_block">
-									<h2><?= $pr -> nama ?></h2>
-									<p><?= $pr -> desk ?></p>
+									<h2><?= $pr->nama ?></h2>
+									<p><?= $pr->desk ?></p>
 								</div>
 
 							</div>
@@ -38,11 +38,15 @@
 								<div class="tab_title additional_info_title">
 									<h4>Informasi Tambahan</h4>
 								</div>
-								<p>Tempat:<span><?= $pr -> tempat ?></span></p>
+								<p>Tempat:<span><?= $pr->tempat ?></span></p>
 							</div>
 						</div>
 					</div>
-					<div class="red_button shop_now_button"><a href="#">Daftar</a></div>
+					<?php if ($this->session->userdata('login')){ ?>
+						<div class="red_button shop_now_button"><a href="<?= site_url('project-reg/'.$pr->id.'/'.$pr->slug) ?>">Daftar</a></div>
+					<?php } else { ?>
+						<div class="red_button shop_now_button"><a href="<?= site_url('login') ?>">Masuk</a></div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

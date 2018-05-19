@@ -22,5 +22,25 @@ class Project extends CI_Controller {
         $this->load->view('dashboard/user/main', $data);
     }
 
+    public function reg_project($id, $slug){
+        $cek = $this->project_model->checkProject($id, $slug);
+        
+        if($this->session->userdata('login')){
+            if($cek->num_rows() > 0){
+                $this->load->model('user_model');
+
+                $vol = $this->user_model->getVolunteer();
+                $this->project_model->addAmbilProyek($vol->id, $id);
+                redirect(site_url('dashboard/now'));
+            }
+            else {
+                redirect(site_url('project'));
+            }
+        }
+        else {
+            redirect(site_url('project'));
+        }
+    }
+
 
 }

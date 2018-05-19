@@ -258,6 +258,9 @@ class User extends CI_Controller {
             }
             else {
                 if($vol->status == 'D' || $vol->status == 'T'){
+                    $vol = $this->user_model->getVolunteer();
+
+                    $data['projects'] = $this->user_model->getProyekByIdVol($vol->id);
                     $data['content'] = 'dashboard/user/dashboard_now';
                     $this->load->view('dashboard/user/main', $data);
                 }

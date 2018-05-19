@@ -6,6 +6,15 @@ class Project_model extends CI_Model {
     public function __construct(){
         date_default_timezone_set('Asia/Jakarta');
     }
+
+    public function checkProject($id, $slug){
+        $where = array(
+            'id' => $id,
+            'slug' => $slug
+        );
+        
+        return $this->db->get_where('proyek', $where);
+    }
     
     public function getIdVol(){
         $q = $this->db->get_where('volunteer', ['id_akun' => $this->session->userdata('id_akun')]);
@@ -29,6 +38,15 @@ class Project_model extends CI_Model {
         
         $this->db->insert('proyek', $data);
     }
+
+    public function addAmbilProyek($id_vol, $id_proyek){
+        $data = array(
+            'id_vol' => $id_vol,
+            'id_proyek' => $id_proyek
+        );
+
+        $this->db->insert('ambil_proyek', $data);
+    }
     
     public function getProject(){
         $q = $this->db->get('proyek', ['status' => 1]);
@@ -44,5 +62,6 @@ class Project_model extends CI_Model {
         $q = $this->db->get_where('proyek', $where);
         return $q->result();
     }
+
 
 }
